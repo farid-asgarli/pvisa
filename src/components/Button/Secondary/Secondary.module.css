@@ -1,0 +1,30 @@
+.Secondary {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-bg-secondary);
+  font-weight: 500;
+  font-size: 16px;
+  height: 56px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.Secondary:hover,
+.Secondary:focus {
+  background-color: var(--color-hover-secondary);
+  border-color: var(--color-hover-secondary);
+}
+
+.Secondary:not(:disabled) {
+  box-shadow: rgb(255 65 108 / 24%) 0px 8px 16px 0px;
+}
+
+.Secondary:disabled {
+  box-shadow: var(--box-shadow-primary);
+}
+
+@media screen and (max-width: 992px) {
+  .Secondary {
+    height: 46px;
+    font-size: 14px;
+  }
+}

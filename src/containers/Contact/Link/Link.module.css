@@ -1,0 +1,51 @@
+.Body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+  max-width: 365px;
+}
+
+.Body .Anchor {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 145%;
+  color: var(--color-text-primary);
+  white-space: pre-wrap;
+}
+
+.Body .IconWrapper {
+  width: 85px;
+  height: 85px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Body .IconWrapper .Icon {
+  font-size: 40px;
+  color: var(--color-text-primary);
+}
+
+@media screen and (max-width: 992px) {
+  .Body {
+    max-width: unset;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+  .Body .Anchor {
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .Body .IconWrapper {
+    width: 55px;
+    height: 55px;
+  }
+  .Body .IconWrapper .Icon {
+    font-size: 30px;
+  }
+}

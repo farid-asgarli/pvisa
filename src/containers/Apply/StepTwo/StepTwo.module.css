@@ -1,0 +1,74 @@
+.Body .MainContent {
+  display: grid;
+  grid-template-columns: 57fr 43fr;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+.Body .MainContent .Left {
+  background-color: #fff;
+  padding: 0px 30px 50px 30px;
+}
+
+.Body .MainContent .Left .Form .InputCollection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.Body .MainContent .Left .Form .InputCollection.FullRow {
+  grid-template-columns: 1fr;
+}
+
+.Body .MainContent .Left .Form .Group {
+  margin: 40px 0;
+}
+
+.Body .MainContent .Left .Form .Group .Heading {
+  margin-bottom: 25px;
+}
+
+.Body .MainContent .Left .Form .Group .Legend {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: var(--color-text-content);
+}
+
+.Body .MainContent .Left .Form .Group .PaymentOptions {
+  margin-top: 25px;
+}
+
+.Body .MainContent .Left .Form .Group .Checkbox {
+  margin-top: 30px;
+}
+.Body .MainContent .Left .Form .Bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 35px;
+}
+
+.Body .MainContent .Left .Form .Bottom .SubmitButton {
+  width: 100%;
+  text-align: center;
+}
+
+.Body .PaymentOptions .PaymentHeader .Icons {
+  position: absolute;
+  right: 6%;
+}
+
+@media screen and (max-width: 992px) {
+  .Body .MainContent {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  .Body .MainContent .Left .Form .InputCollection {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+}

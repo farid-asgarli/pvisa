@@ -1,0 +1,68 @@
+.Body {
+  /* width: 520px; */
+  border-radius: var(--border-radius-primary);
+  background-color: #e5edfb;
+  padding: 20px;
+}
+
+.Body .ProcessingFee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Body .Divider {
+  margin: 35px 0;
+}
+
+.Body .PromoCode {
+  margin-top: 20px;
+}
+
+.Body .PromoCode .Form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.Body .PromoCode .TotalFee {
+  background: rgba(189, 213, 255, 0.27);
+  border: 1.5px solid rgba(88, 142, 237, 0.5);
+  border-radius: var(--border-radius-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+.Body .PromoCode .TotalFee * {
+  margin: unset;
+}
+
+.Body .ProcessingDetails .Collection {
+  margin-top: 20px;
+}
+
+.Body .ProcessingDetails .Collection .KeyValues {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.Body .ProcessingDetails .Collection .KeyValues * {
+  margin: unset;
+}
+
+.Body .Documents .Content {
+  background: rgba(36, 104, 229, 0.04);
+  border: 1.5px solid #2468e5;
+  border-radius: calc(var(--border-radius-primary) + 2px);
+  padding: 15px;
+}
+
+.Body .Documents .Content .Form {
+  display: flex;
+  flex-direction: column;
+}

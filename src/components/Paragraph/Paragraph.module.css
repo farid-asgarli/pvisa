@@ -1,0 +1,13 @@
+.Body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.8px;
+  color: var(--color-text-content);
+}
+
+.Ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

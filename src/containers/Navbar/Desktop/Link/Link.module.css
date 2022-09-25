@@ -1,0 +1,12 @@
+.Body {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--color-text-primary);
+}
+
+.Body.Active {
+  color: #5b72f5 !important;
+}

@@ -1,0 +1,29 @@
+.Body {
+  line-height: 42px;
+  color: var(--color-text-primary) !important;
+  font-weight: 600;
+}
+
+.Body.Small {
+  font-size: 16px;
+}
+
+.Body.Mid {
+  font-size: 24px;
+}
+
+.Body.Large {
+  font-size: 32px;
+}
+
+.Body.Light {
+  font-weight: 500;
+}
+
+.Body.Medium {
+  font-weight: 600;
+}
+
+.Body.Bold {
+  font-weight: 700;
+}

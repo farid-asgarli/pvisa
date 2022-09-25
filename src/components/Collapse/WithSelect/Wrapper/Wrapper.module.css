@@ -1,0 +1,5 @@
+.Body {
+  background-color: transparent;
+  /* border-radius: var(--border-radius-primary); */
+  border: unset;
+}

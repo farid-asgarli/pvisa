@@ -1,0 +1,15 @@
+.Body .Collection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin: 70px 0 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .Body .Collection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

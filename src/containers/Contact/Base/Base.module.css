@@ -1,0 +1,89 @@
+.Body .Subtitle {
+  color: #454648;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 145%;
+  width: 100%;
+  letter-spacing: 0.05em;
+}
+
+.Body .Head {
+  text-align: center;
+}
+
+.Body {
+  padding: 50px 0;
+}
+
+.Body .Main {
+  background: #f7f7fb;
+  padding: 50px 0;
+  margin-top: 80px;
+}
+
+.Body .Main .Links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.Body .Social {
+  text-align: center;
+}
+
+.Body .SocialContent .SocialIcon {
+  color: #333544;
+  font-size: 20px;
+  transition: 0.3s ease-in-out color;
+}
+
+.Body .SocialContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Body .ApplicationForm {
+  margin-top: 70px;
+}
+
+.Body .BottomDivider {
+  width: 150px;
+  min-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Body .BaseContactOption .Details .Icon {
+  font-size: 30px;
+  color: #000;
+}
+
+.Body .BaseContactOption .Details .Text {
+  color: var(--color-text-primary);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 145%;
+  margin-top: 3px;
+}
+
+.Body .BaseContactOption .Details {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Body .BaseContactOption .Title {
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .Body .Main .Links {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,38 @@
+.Body .Description {
+  font-size: 14px;
+  margin: 30px 0;
+}
+
+.Body {
+  padding: 50px 0;
+}
+
+.Body .Head {
+  display: grid;
+  grid-template-columns: 9fr 2fr;
+  gap: 20px;
+}
+
+.Body .Main {
+  display: grid;
+  grid-template-columns: 9fr 2fr;
+  gap: 20px;
+}
+
+.Body .Head .Heading {
+  margin-top: 40px;
+}
+
+.Body .Main .ApplicationForm {
+  background-color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+  .Body .Head {
+    grid-template-columns: 1fr;
+  }
+
+  .Body .Main {
+    grid-template-columns: 1fr;
+  }
+}

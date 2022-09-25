@@ -1,0 +1,43 @@
+.Body {
+  height: 465px;
+  border-radius: var(--border-radius-primary);
+  position: relative;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  user-select: none;
+  padding: 0px 10px 50px 10px;
+  overflow: hidden;
+}
+
+.Body .Heading {
+  color: var(--color-text-white);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.Button {
+  width: 100%;
+}
+
+.Body .Content {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .Heading {
+    max-width: 100%;
+  }
+  .Body {
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,84 @@
+.Body {
+  padding: 50px 0;
+}
+
+.Body .MainContent {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  gap: 50px;
+}
+
+.Body .Left .PostProperties {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Body .Left .PostProperties .Text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Body .Left .PostProperties .Text .Author {
+  font-weight: 500;
+  font-size: 16px;
+  color: #191b29;
+}
+
+.Body .Left .PostProperties .Text .Date {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-text-content);
+}
+
+.Body .CategoryTitle {
+  color: var(--color-hover-primary);
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.Body .SocialContent .SocialIcon {
+  color: #333544;
+  font-size: 20px;
+  transition: 0.3s ease-in-out color;
+}
+
+.Body .SocialContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.Body .Right .RecentPostsTable {
+  margin-bottom: 30px;
+}
+
+.Body .Left .Content {
+  width: 100%;
+  padding: 50px 0;
+}
+.Body .Left .Content h1,
+.Body .Left .Content h2,
+.Body .Left .Content h3,
+.Body .Left .Content h4,
+.Body .Left .Content h5 {
+  margin: 40px 0 10px 0;
+}
+
+.Body .Left .Content img {
+  width: 100%;
+  border-radius: var(--border-radius-primary);
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 992px) {
+  .Body .MainContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Body .MainContent .Right .Banner {
+    display: none;
+  }
+}

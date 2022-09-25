@@ -1,0 +1,54 @@
+.Body {
+  height: 342px;
+  position: relative;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+}
+
+.Heading {
+  color: var(--color-text-white) !important;
+  font-size: 46px !important;
+  font-weight: 600 !important;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+  position: relative;
+  max-width: 50%;
+  margin-bottom: 50px !important;
+}
+
+.Button {
+  width: max-content;
+}
+
+@media screen and (max-width: 992px) {
+  .Heading {
+    max-width: 100%;
+    font-size: 36px !important;
+    line-height: 40px;
+    text-align: center;
+  }
+  .Body {
+    align-items: center;
+    text-align: center;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .Body {
+    height: 180px;
+    align-items: center;
+  }
+
+  .Heading {
+    font-size: 24px !important;
+    line-height: 30px;
+    margin-bottom: 20px !important;
+  }
+}

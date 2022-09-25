@@ -1,0 +1,28 @@
+.Body {
+  font-size: 32px !important;
+  line-height: 42px !important;
+  color: var(--color-text-primary) !important;
+}
+
+.Body:not(.Highlighted) {
+  font-weight: 600;
+}
+
+.Body.Highlighted .WordToHighlight {
+  font-weight: 700;
+}
+
+.Body.Highlighted {
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .Body {
+    font-size: 26px !important;
+    line-height: 32px !important;
+  }
+}

@@ -1,0 +1,42 @@
+.Body {
+  display: block;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1031;
+}
+
+.Inner {
+  animation: 400ms linear infinite spinner;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid var(--color-secondary);
+  border-radius: 50%;
+  border-right: 2px solid transparent;
+  border-top: 2px solid var(--color-secondary);
+  box-sizing: border-box;
+  height: 18px;
+  width: 18px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 992px) {
+  .Body {
+    display: none;
+    position: fixed;
+    right: 30px;
+    top: 22px;
+    z-index: 1031;
+  }
+  .Inner {
+    height: 24px;
+    width: 24px;
+  }
+}

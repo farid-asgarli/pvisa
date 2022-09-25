@@ -1,0 +1,28 @@
+.Collection {
+  display: flex;
+  flex-direction: column;
+}
+
+.Collection .Link {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 20px;
+  margin: 10px 0;
+  transition: 0.3s ease-in-out opacity;
+}
+
+.Collection .Link:hover {
+  opacity: 1;
+}
+
+.DrawerTitle {
+  font-size: 22px;
+}
+
+.CloseIcon {
+  font-size: 20px;
+}
+
+.ActiveLink {
+  opacity: 1 !important;
+}

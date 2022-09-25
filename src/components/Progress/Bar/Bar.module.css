@@ -1,0 +1,21 @@
+.Body {
+  background: var(--color-hover-primary);
+  height: 3px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+}
+
+.Inner {
+  box-shadow: 0 0 10px var(--color-hover-primary),
+    0 0 5px var(--color-hover-primary);
+  display: block;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  transform: rotate(3deg) translate(0px, -4px);
+  width: 999999;
+}

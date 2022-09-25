@@ -1,0 +1,30 @@
+.Inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Body {
+  padding: 20px 0;
+  display: none;
+}
+
+.Body .Inner .HamburgerMenu {
+  margin: unset;
+  background-color: unset;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Body .Inner .HamburgerMenu .Icon {
+  color: var(--color-bg-primary);
+  font-size: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .Body {
+    display: block;
+  }
+}

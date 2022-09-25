@@ -1,0 +1,24 @@
+.Body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #2f77fc;
+  border-radius: var(--border-radius-primary);
+  padding: 10px 15px;
+}
+.Body .Switch {
+  margin-left: auto;
+  /* width: calc(10% + 10px); */
+}
+
+.Body .Description {
+  margin-left: 10px;
+  width: 50%;
+  font-size: 14px;
+  color: #051737;
+}
+
+.Body .Icon {
+  color: #2f77fc;
+  font-size: 20px;
+}

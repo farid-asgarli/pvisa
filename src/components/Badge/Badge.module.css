@@ -1,0 +1,52 @@
+.Body {
+  padding: 20px 10px;
+  border-radius: var(--border-radius-primary);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out opacity;
+}
+.Body:active {
+  opacity: 1;
+  background-color: rgb(242, 240, 240);
+}
+
+.Body:hover {
+  opacity: 0.8;
+}
+
+.Body .Left {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 160%;
+  text-align: center;
+}
+
+.Body .Right {
+  border-radius: var(--border-radius-primary);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 160%;
+  padding: 10px;
+  text-align: center;
+}
+
+.Body .Right.Pending {
+  color: #674c06;
+  background: rgba(255, 199, 0, 0.21);
+}
+
+.Body .Right.Processing {
+  color: #06677b;
+  background: rgba(5, 210, 255, 0.21);
+}
+
+.Body .Right.Done {
+  color: #086128;
+  background: rgba(0, 255, 87, 0.21);
+}

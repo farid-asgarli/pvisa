@@ -1,0 +1,29 @@
+.Heading {
+  text-align: center;
+}
+
+.Body {
+  margin-top: 100px;
+  margin-bottom: 70px;
+}
+
+.Body .LinkContentWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.Body .LinkContent {
+  max-width: 800px;
+  width: 100%;
+}
+
+.Body .LinkContent .Title {
+  font-weight: 500;
+  font-size: 25px;
+  color: #333544;
+}
+
+.Body .LinkContent .Collection {
+  margin-top: 30px;
+}

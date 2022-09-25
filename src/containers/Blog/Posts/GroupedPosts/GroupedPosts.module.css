@@ -1,0 +1,38 @@
+.Body .CategoryTitle {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: unset;
+}
+
+.Body .Heading {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.Body .Heading .ViewAll {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.Body .Heading .ViewAll .ArrowLeftIcon {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .Body .Heading {
+    padding-left: unset;
+    padding-right: unset;
+  }
+
+  .Body .CategoryTitle {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,20 @@
+.Body .Collection {
+  margin-top: 30px;
+}
+
+.Body {
+  background: #eaeef4;
+  padding: 50px 0;
+}
+
+.Body .Arrow {
+  top: 40%;
+}
+
+.Body .ArrowLeft {
+  left: -55px;
+}
+
+.Body .ArrowRight {
+  right: -55px;
+}

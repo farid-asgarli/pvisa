@@ -1,0 +1,55 @@
+.Extended {
+  width: 100%;
+  border-radius: var(--border-radius-primary);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.LeftContent,
+.RightContent,
+.MidContent {
+  display: flex;
+  align-items: center;
+}
+
+.LeftContent *,
+.RightContent * {
+  font-size: 25px;
+}
+
+.MidContent {
+  margin-left: 20px;
+}
+
+.RightContent {
+  margin-left: auto;
+}
+
+.Extended.Danger {
+  color: #8b1212;
+  background: rgba(249, 61, 61, 0.02);
+  border: 1px solid rgba(249, 61, 61, 0.35);
+}
+
+.Extended.Primary {
+  color: var(--color-text-primary);
+  background: rgba(36, 104, 229, 0.06);
+  border: 1px solid #3d4494;
+}
+
+.Extended.Success {
+  color: #0ea662;
+  background: #ebfff4;
+  border: 1px solid #9fdcb1;
+}
+
+.Extended.Warning {
+  color: #8b4e12;
+  background: rgba(249, 158, 61, 0.02);
+  border: 1px solid rgba(249, 161, 61, 0.35);
+}

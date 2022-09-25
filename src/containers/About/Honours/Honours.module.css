@@ -1,0 +1,52 @@
+.Body {
+  padding: 60px 0 40px 0;
+}
+
+.Body .Rating {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Body .Rating .Stars {
+  display: flex;
+  justify-content: center;
+}
+
+.Body .Rating .StarIcon {
+  width: 20px;
+  height: 20px;
+  color: #e4c403;
+}
+
+.Body .Rating .Text {
+  color: #7b8794;
+  font-weight: 400;
+  font-size: 17.7681px;
+  line-height: 140%;
+  margin-left: 20px;
+}
+
+.Body .Certificates {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .Body {
+    padding: 30px 0;
+  }
+
+  .Body .Certificates .WideImage {
+    order: -1;
+    width: 80%;
+  }
+  .Body .Rating .Text,
+  .Body .Rating .Stars {
+    margin-top: 20px;
+  }
+}

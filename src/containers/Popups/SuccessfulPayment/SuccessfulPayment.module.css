@@ -1,0 +1,59 @@
+.Body {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  flex-direction: column;
+  border-radius: var(--border-radius-primary);
+  overflow: hidden;
+}
+
+.Body .Head,
+.Body .Bottom {
+  padding: 20px 30px;
+}
+
+.Body .Head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Body .Head .Title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #0ea662;
+  margin-top: 20px;
+}
+.Body .Head .Icon {
+  color: #0ea662;
+  font-size: 80px;
+}
+
+.Body .Bottom {
+  background: #f6f9fe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Body .Bottom .Button {
+  width: 100%;
+}
+
+.Body .Bottom .Title {
+  color: var(--color-text-primary);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+}
+.Body .Bottom .Content {
+  width: 70%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: var(--color-text-content);
+  margin: 10px 0 30px 0;
+}

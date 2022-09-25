@@ -1,0 +1,23 @@
+.Body {
+  border-bottom: 1px solid rgba(11, 19, 90, 0.13);
+}
+
+.Inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Body {
+  padding: 20px 0;
+}
+
+.Link {
+  margin: 0 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .Body {
+    display: none;
+  }
+}
