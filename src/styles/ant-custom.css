@@ -1,0 +1,258 @@
+/* Collapse - Default */
+
+.collapse-default.ant-collapse.ant-collapse-icon-position-right {
+  border: unset;
+}
+
+.collapse-default.ant-collapse .ant-collapse-content {
+  border-top: unset;
+}
+
+.collapse-default.ant-collapse .ant-collapse-item .ant-collapse-header {
+  color: var(--color-text-primary);
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.collapse-default.ant-collapse .ant-collapse-item.ant-collapse-item-active {
+  border-color: var(--color-hover-primary);
+  border-bottom: 1px solid var(--color-hover-primary);
+}
+.collapse-default
+  .ant-collapse
+  .ant-collapse-item.ant-collapse-item-active
+  .ant-collapse-arrow {
+  color: var(--color-hover-primary);
+}
+.collapse-default.ant-collapse .ant-collapse-item .ant-collapse-arrow {
+  transition: 0.3s color ease-in-out;
+}
+
+.collapse-default.ant-collapse .ant-collapse-item .ant-collapse-arrow > svg {
+  font-size: 20px;
+}
+
+.collapse-default.ant-collapse .ant-collapse-item {
+  transition: 0.3s border-color ease-in-out, 0.3s border ease-in-out;
+}
+
+/* Control arrow direction */
+
+.ant-collapse
+  .ant-collapse-item
+  .ant-collapse-header
+  .anticon.ant-collapse-arrow
+  > svg {
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+}
+.ant-collapse
+  .ant-collapse-item.ant-collapse-item-active
+  .ant-collapse-arrow
+  > svg {
+  transform: rotate(-90deg) !important;
+}
+
+/* Collapse - Radio */
+
+.collapse-radio.ant-collapse .ant-collapse-item.ant-collapse-item-active {
+  border-color: var(--color-hover-primary);
+  background: rgba(36, 104, 229, 0.04);
+  border: 2px solid #2468e5;
+  border-radius: 6px;
+}
+.collapse-radio.ant-collapse .ant-collapse-item {
+  margin: 10px 0;
+  border: 2px solid rgba(11, 19, 90, 0.18);
+  border-radius: 6px;
+}
+
+.collapse-radio.ant-collapse.ant-collapse-icon-position-right
+  .ant-collapse-item
+  .ant-collapse-header,
+.collapse-radio.ant-collapse.ant-collapse-icon-position-right
+  .ant-collapse-item {
+  border-radius: 6px;
+  user-select: none;
+}
+
+.collapse-radio.ant-collapse.ant-collapse-icon-position-right
+  .ant-collapse-item.ant-collapse-item-active
+  .ant-collapse-header {
+  background: rgba(36, 104, 229, 0.04);
+}
+
+.collapse-radio.ant-collapse .ant-collapse-content {
+  border-top: unset;
+  background: inherit;
+}
+
+.collapse-radio.ant-collapse .ant-collapse-item .ant-collapse-arrow > svg {
+  font-size: 15px;
+}
+
+.collapse-radio.ant-collapse.ant-collapse-icon-position-right
+  .ant-collapse-item
+  .ant-collapse-header {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  position: relative;
+}
+
+.ant-collapse-header .ant-radio-wrapper {
+  position: unset;
+}
+/* Ant input add-on */
+
+.ant-input-group-wrapper .ant-input-group .ant-input-group-addon {
+  background-color: #fff;
+  /* border-left: unset; */
+}
+
+.ant-picker-suffix > svg,
+.ant-input-group-wrapper .ant-input-group .ant-input-group-addon > svg {
+  font-size: 25px;
+  transform: translateY(2px);
+  color: var(--color-bg-primary);
+}
+
+.ant-input-group-wrapper .ant-input-group .ant-input {
+  border-right: unset;
+}
+.ant-input-group-wrapper
+  .ant-input-group
+  .ant-input:hover
+  + .ant-input-group-addon,
+.ant-input-group-wrapper
+  .ant-input-group
+  .ant-input:focus
+  + .ant-input-group-addon {
+  border-color: #6ba1ff;
+}
+
+.ant-input-group-wrapper .ant-input-group .ant-input:hover,
+.ant-input-group-wrapper .ant-input-group .ant-input:focus {
+  box-shadow: unset;
+}
+
+/* Input group */
+
+/* .ant-input-group-wrapper .ant-input-group .ant-input-group-addon {
+  border-left: 1px solid #d9d9d9;
+}
+
+.ant-input-group-wrapper .ant-input-group .ant-input {
+  border-right: 1px solid #d9d9d9;
+} */
+
+/* Ant modal */
+
+/* .ant-modal .ant-modal-content .ant-modal-header .ant-modal-title {
+    color: var(--color-text-primary);
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 0;
+  } */
+
+.ant-modal .ant-modal-content .ant-modal-body {
+  padding: unset;
+}
+
+/* Ant checkbox */
+
+.ant-checkbox .ant-checkbox-inner {
+  width: 24px;
+  height: 24px;
+}
+
+.ant-checkbox .ant-checkbox-inner::after {
+  width: 7.714286px;
+  height: 15.142857px;
+}
+
+.ant-checkbox-wrapper span:nth-of-type(2) {
+  transform: translateY(-3px);
+  margin-left: 10px;
+  color: var(--color-text-primary);
+}
+
+label.ant-checkbox-wrapper + label.ant-checkbox-wrapper {
+  margin-left: unset;
+}
+
+/* .ant-checkbox-wrapper{} */
+
+/* Ant switch */
+
+.ant-switch-inner {
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+.ant-switch {
+  height: 26px;
+}
+
+.ant-switch-handle {
+  width: 20px;
+  height: 20px;
+  top: 3px;
+}
+
+.ant-switch-checked .ant-switch-handle {
+  left: calc(100% - 22px);
+}
+
+/* Ant select */
+.ant-select {
+  font-size: 16px;
+}
+
+.ant-select-single:not(.nationality-select-bar) .ant-select-selector {
+  height: 60px;
+}
+
+.ant-select-single:not(.nationality-select-bar)
+  .ant-select-selector
+  .ant-select-selection-placeholder {
+  margin-top: 14px;
+}
+
+.ant-select.ant-select-single
+  .ant-select-selector
+  .ant-select-selection-search
+  input {
+  height: 100%;
+}
+
+.ant-select .ant-select-selector .ant-select-selection-item,
+.ant-input-group-addon
+  .ant-select
+  .ant-select-selector
+  .ant-select-selection-item {
+  line-height: 57px;
+}
+
+/* Ant Select for nationality */
+
+.nationality-select-bar.ant-select:not(.ant-select-customize-input)
+  .ant-select-selector {
+  border: none;
+}
+
+.nationality-select-bar.ant-select .ant-select-selection-item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nationality-select-bar.step-two.ant-select .ant-select-selector {
+  min-width: 100px;
+}
+
+.nationality-select-bar:not(.step-two).ant-select .ant-select-selector {
+  min-width: 170px;
+}

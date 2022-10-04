@@ -1,0 +1,187 @@
+[
+  { "unique_identifier": "nav_menu_home", "translation": "Ana sayfa" },
+  { "unique_identifier": "nav_menu_aboutus", "translation": "Hakkında" },
+  { "unique_identifier": "nav_menu_faq", "translation": "FAQ" },
+  { "unique_identifier": "nav_menu_contacts", "translation": "İletişim" },
+  { "unique_identifier": "nav_menu_blog", "translation": "Blog" },
+  { "unique_identifier": "buttons_more_info", "translation": "More info" },
+  { "unique_identifier": "buttons_apply", "translation": "Müraciət et" },
+  { "unique_identifier": "buttons_visa", "translation": "Apply for visa" },
+  { "unique_identifier": "buttons_confirm", "translation": "Təsdiqlə" },
+  { "unique_identifier": "buttons_find_blog", "translation": "Bloq axtar" },
+  {
+    "unique_identifier": "buttons_continue_to_payment",
+    "translation": "Continue to payment"
+  },
+  {
+    "unique_identifier": "buttons_add_another_person",
+    "translation": "Add another person"
+  },
+  {
+    "unique_identifier": "buttons_remove_person",
+    "translation": "Remove person"
+  },
+  { "unique_identifier": "buttons_close", "translation": "Bağla" },
+  { "unique_identifier": "buttons_go_back", "translation": "Geri qayıt" },
+  { "unique_identifier": "buttons_read_blog", "translation": "Bloqu oxu" },
+  {
+    "unique_identifier": "nocontent_service",
+    "translation": "Üzr istəyirik, kriteriyaya uyğun xidmət tapılmadı"
+  },
+  { "unique_identifier": "error_notfound_title", "translation": "Tapılmadı" },
+  {
+    "unique_identifier": "error_notfound_content",
+    "translation": "Üzr istəyirik, ama axtardığınız məlumatı tapmaq mümkün olmadı"
+  },
+  {
+    "unique_identifier": "error_servererror_title",
+    "translation": "Daxili Xəta"
+  },
+  {
+    "unique_identifier": "error_servererror_content",
+    "translation": "Üzr istəyirik, sorğunuzu yerinə yetirərkən server daxili xəta baş verdi"
+  },
+  {
+    "unique_identifier": "error_no_fitting_content",
+    "translation": "Unfortunately, no appropriate result was found based on your query."
+  },
+  {
+    "unique_identifier": "footer_columns_about_title",
+    "translation": "Haqqımızda"
+  },
+  {
+    "unique_identifier": "footer_columns_legal_title",
+    "translation": "Hüquqi"
+  },
+  {
+    "unique_identifier": "footer_columns_legal_termsandconditions",
+    "translation": "Qaydalar və şərtlər"
+  },
+  {
+    "unique_identifier": "footer_columns_legal_privacypolicy",
+    "translation": "Məxfilik siyasəti"
+  },
+  {
+    "unique_identifier": "footer_columns_social_title",
+    "translation": "Sosial"
+  },
+  {
+    "unique_identifier": "footer_copyright",
+    "translation": "Bütün huquqlar qorunur."
+  },
+  {
+    "unique_identifier": "banners_promotion_text",
+    "translation": "Vaxt itirmədən viza almağa hazırsınız?"
+  },
+  {
+    "unique_identifier": "banners_home_text",
+    "translation": "emal vaxtını və xərcləri nəzərdən keçirin"
+  },
+  {
+    "unique_identifier": "visacard_processing_details",
+    "translation": "Processing details"
+  },
+  { "unique_identifier": "visacard_totalfee", "translation": "Total fee" },
+  {
+    "unique_identifier": "visacard_tip",
+    "translation": "* Includes Processing fee"
+  },
+  {
+    "unique_identifier": "visacard_processing_details_asfastas",
+    "translation": "Sürəti"
+  },
+  {
+    "unique_identifier": "visacard_processing_details_durationofstay",
+    "translation": "Duration of stay"
+  },
+  { "unique_identifier": "blog_popular_blogs", "translation": "Popular blogs" },
+  {
+    "unique_identifier": "blog_categories",
+    "translation": "Bloq Kateqoriyaları"
+  },
+  { "unique_identifier": "blog_posts_viewall", "translation": "Hamısına bax" },
+  { "unique_identifier": "blog_topics", "translation": "Mövzular" },
+  { "unique_identifier": "blog_recentpost", "translation": "Recent Post" },
+  { "unique_identifier": "blog_relatedposts", "translation": "Related posts" },
+  {
+    "unique_identifier": "contact_header_title",
+    "translation": "Get in touch!"
+  },
+  {
+    "unique_identifier": "contact_header_subtitle",
+    "translation": "contact us for a quote, help it to join the team"
+  },
+  {
+    "unique_identifier": "contact_form_title",
+    "translation": "Still have a question?"
+  },
+  { "unique_identifier": "contact_form_fields_name", "translation": "Name" },
+  { "unique_identifier": "contact_form_fields_email", "translation": "Email" },
+  { "unique_identifier": "contact_form_fields_phone", "translation": "Phone" },
+  {
+    "unique_identifier": "contact_form_fields_subject",
+    "translation": "Subject"
+  },
+  {
+    "unique_identifier": "contact_form_fields_comment",
+    "translation": "Comment"
+  },
+  {
+    "unique_identifier": "steps_title",
+    "translation": "E-visa to \"Country\" in 3 easy steps!"
+  },
+  {
+    "unique_identifier": "apply_select_nationality",
+    "translation": "Choose your Nationality"
+  },
+  { "unique_identifier": "about_us_title", "translation": "About Us - TR" },
+  {
+    "unique_identifier": "about_us_content",
+    "translation": "Vizam.az is an online platform that provides services in obtaining travel, education and business trip visas to any country worldwide. Visa application processes are complex, time-consuming and require a detailed approach. Our company does its best to help its customers to get a visa and minimizes their involvement in the process. The user-friendly interface of our website, specialization exclusively in visa issues and wide database, containing all information about visa requirements of any country in the world make Vizam.az unique in the service market."
+  },
+  {
+    "unique_identifier": "order_summary_title",
+    "translation": "Order Summary"
+  },
+  {
+    "unique_identifier": "order_summary_promocode",
+    "translation": "Promo code"
+  },
+  {
+    "unique_identifier": "order_summary_discountcode",
+    "translation": "Discount code"
+  },
+  { "unique_identifier": "order_summary_totalfee", "translation": "Total fee" },
+  {
+    "unique_identifier": "order_summary_processing_title",
+    "translation": "Processing details"
+  },
+  {
+    "unique_identifier": "order_summary_frocessing_fee",
+    "translation": "Processing fee"
+  },
+  {
+    "unique_identifier": "order_summary_processing_residency",
+    "translation": "Residency"
+  },
+  {
+    "unique_identifier": "order_summary_processing_destination",
+    "translation": "Destination"
+  },
+  {
+    "unique_identifier": "order_summary_processing_asfastas",
+    "translation": "As fast as"
+  },
+  {
+    "unique_identifier": "order_summary_processing_durationofstay",
+    "translation": "Duration of stay"
+  },
+  {
+    "unique_identifier": "order_summary_generalinformation",
+    "translation": "General Information"
+  },
+  {
+    "unique_identifier": "order_summary_requireddocuments",
+    "translation": "Required documents"
+  }
+]

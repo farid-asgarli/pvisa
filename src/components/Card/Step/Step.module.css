@@ -1,0 +1,44 @@
+.Body {
+  min-height: 320px;
+  position: relative;
+  box-shadow: var(--box-shadow-primary);
+  border-radius: var(--border-radius-primary);
+  background-color: #fff;
+}
+
+.Head {
+  height: 110px;
+  border-bottom: 1px solid rgba(11, 19, 90, 0.13);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Content,
+.Head {
+  padding: 30px 30px;
+}
+
+.Content {
+  padding-bottom: 0;
+}
+
+.Title {
+  color: var(--color-text-primary) !important;
+  text-align: center;
+  font-size: 18px !important;
+}
+
+.Paragraph {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.Icon {
+  color: #3248e9;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 992px) {
+}

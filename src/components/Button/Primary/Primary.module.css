@@ -1,0 +1,22 @@
+.Primary {
+  font-weight: 500;
+  font-size: 16px;
+  height: 56px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.Primary:not(:disabled) {
+  box-shadow: rgba(0, 54, 171, 0.24) 0px 8px 16px 0px;
+}
+
+.Primary:disabled {
+  box-shadow: var(--box-shadow-primary);
+}
+
+@media screen and (max-width: 992px) {
+  .Primary {
+    height: 46px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,247 @@
+.Body .FormContent .Heading .Title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  color: #44475c;
+}
+
+.Body .FormContent .Subtitle {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #44475c;
+}
+
+.Body .FormContent .Heading {
+  margin: 40px 0;
+}
+
+.Body .FormContent {
+  padding: 0 100px 50px 100px;
+}
+
+.Body .ApplicantHeading {
+  font-size: 16px;
+  margin-bottom: unset;
+}
+
+.Body .ApplicantHeadingWrapper {
+  height: 70px;
+  background: #e5edfb;
+  border-radius: var(--border-radius-primary);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.Body .ApplicationFormHeading {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: #0a223a;
+}
+
+.Body .FormContent .Inputs .TextInputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 20px;
+}
+
+.Body .FormContent .Inputs .FileInputs {
+  margin-top: 20px;
+}
+
+.Body .FormContent .Inputs .AttachmentOne {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.Body .FormContent .Inputs .EligibilityCheck {
+  margin-top: 100px;
+}
+
+.Body .FormContent .Inputs .EligibilityCheck .Title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #0a223a;
+  text-align: left;
+}
+
+.Body .FormContent .Inputs .EligibilityCheck .Box {
+  border: 2px solid #2f77fc;
+  border-radius: var(--border-radius-primary);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.Body .FormContent .Inputs .EligibilityCheck .Box .InfoIcon {
+  font-size: 25px;
+  color: #2f77fc;
+}
+
+.Body .FormContent .Inputs .EligibilityCheck .Box .Switch {
+  margin-left: auto;
+}
+.Body .FormContent .Inputs .EligibilityCheck .Box .Content {
+  margin-left: 20px;
+  max-width: 80%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: -0.08px;
+  color: #051737;
+}
+
+.Body .FormContent .Inputs .ConvictionDialog {
+  margin: 50px 0;
+}
+
+.Body .FormContent .Inputs .ConvictionDialog .Title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: -0.08px;
+  color: #1f2933;
+}
+
+.Body .FormContent .Inputs .ConvictionDialog .Buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.Body .FormContent .Inputs .ConvictionDialog .Buttons .Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 60px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  border-radius: var(--border-radius-primary);
+  cursor: pointer;
+}
+
+.Body .FormContent .Inputs .ConvictionDialog .Buttons .Button.Danger {
+  background: rgba(255, 112, 92, 0.11);
+  border: 1px solid #e53b24;
+  color: #c21919;
+}
+.Body .FormContent .Inputs .ConvictionDialog .Buttons .Button.Success {
+  background: rgba(206, 253, 202, 0.19);
+  border: 1px solid #0cb431;
+  color: #0f7625;
+}
+
+.Body .FormContent .Inputs .AttachmentTwo .CollapseHead.OptionOne {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  align-items: baseline;
+}
+
+.Body .FormContent .Inputs .AttachmentTwo .CollapseHead .Title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: -0.08px;
+  color: #0c2451;
+}
+
+.Body .FormContent .Inputs .AttachmentTwo .CollapseHead .Subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: -0.08px;
+  color: #5b616d;
+}
+
+.Body .FormContent .Inputs .AttachmentTwo .CollapseHead.OptionTwo {
+  display: flex;
+  margin-left: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Body .FormContent .Inputs .AttachmentTwo .CollapseHead.OptionTwo .Left {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.Body
+  .FormContent
+  .Inputs
+  .AttachmentTwo
+  .CollapseHead.OptionTwo
+  .Right
+  .Price {
+  margin-bottom: unset;
+}
+
+.Body .FormContent .Inputs .AttachmentTwo .CollapseHead.OptionTwo .Right {
+  position: absolute;
+  width: max-content;
+  right: 3%;
+}
+
+.Body .FormContent .Bottom {
+  margin-top: 80px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.Body .FormContent .Bottom .Button {
+  width: 100%;
+}
+.Body .FormContent .Bottom .Button.DraftButton {
+  background: #eff4ff;
+  border: 1px solid #4383ff;
+  color: #4383ff;
+  cursor: pointer;
+}
+
+.Body .FormContent .Bottom .Button.DraftButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.Body .FormContent .Bottom .Button.SuccessButton,
+.Body .FormContent .Bottom .Button.SuccessButton:disabled {
+  background: #35d057 !important;
+  border: 1px solid #35d057 !important;
+  cursor: not-allowed;
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .Body .FormContent .Inputs .AttachmentOne {
+    grid-template-columns: 1fr;
+    row-gap: 100px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .Body .FormContent {
+    padding: 0 20px 20px 20px;
+  }
+  .Body .FormContent .Inputs .TextInputs {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+}

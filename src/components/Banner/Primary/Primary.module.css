@@ -1,0 +1,28 @@
+.Body {
+  height: 630px;
+  position: relative;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+}
+
+.SearchBar {
+  margin-left: -40px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 992px) {
+  .Body {
+    align-items: center;
+    text-align: center;
+    height: 480px;
+  }
+
+  .Body .SearchBar {
+    margin-left: unset;
+  }
+}

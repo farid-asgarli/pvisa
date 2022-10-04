@@ -1,0 +1,73 @@
+.Body {
+  width: 545px;
+  height: 300px;
+  background-color: var(--color-bg-white);
+  padding: 25px 20px;
+  box-shadow: var(--box-shadow-primary);
+  border-radius: var(--border-radius-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Body .Head .Category {
+  color: #067511;
+}
+
+.Icon {
+  font-size: 20px;
+  color: #333544;
+}
+
+.Author {
+  font-weight: 500;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.Date {
+  color: var(--color-text-content);
+  font-size: 14px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.Bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Right {
+  margin-top: auto;
+}
+
+.QuickShare * {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .Body {
+    width: 100%;
+    height: unset;
+  }
+
+  .Bottom {
+    justify-content: unset;
+    flex-direction: column;
+  }
+
+  .Body .Bottom .Button {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .Body .Head .Title {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .Body .Head .Category {
+    font-size: 16px;
+  }
+}

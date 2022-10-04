@@ -1,0 +1,31 @@
+.Body:hover {
+  background-color: #f3f3f3;
+}
+
+.Body .Anchor .Content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  margin-bottom: unset;
+}
+
+.Body .Anchor {
+  color: #3b3f60;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Body .Anchor .Icon {
+  font-size: 20px;
+  white-space: nowrap;
+  min-width: 30px;
+  margin-left: auto;
+}
+
+.Body {
+  padding: 5px 20px;
+  transition: 0.2s ease-in-out background-color;
+}

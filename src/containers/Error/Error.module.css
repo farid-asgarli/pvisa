@@ -1,0 +1,23 @@
+.Body {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.Icon {
+  font-size: 65px !important;
+  color: var(--color-bg-secondary) !important;
+  margin-bottom: 20px;
+}
+
+.Content {
+  color: var(--color-text-content) !important;
+  font-size: 18px !important;
+}
+
+.Box {
+  border-radius: var(--border-radius-primary);
+  /* box-shadow: var(--box-shadow-primary); */
+  padding: 50px;
+}

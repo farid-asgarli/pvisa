@@ -1,0 +1,34 @@
+{
+  "id": 1,
+  "name": "visaturkey.com",
+  "url": "https://visaturkey.com",
+  "is_active": true,
+  "languages": [
+    {
+      "id": 2,
+      "name": "English",
+      "short_code": "en",
+      "is_active": true,
+      "is_main": false
+    },
+    {
+      "id": 1,
+      "name": "Türkçe",
+      "short_code": "tr",
+      "is_active": true,
+      "is_main": true
+    }
+  ],
+  "logo": {
+    "file": "http://165.227.144.74/media/logo/Logo2x.png"
+  },
+  "hero_image": {
+    "file": "http://165.227.144.74/media/hero/me.png"
+  },
+  "country": {
+    "alpha_2_code": "TR",
+    "alpha_3_code": "TUR",
+    "numeric_code": "792",
+    "name": "Turkey"
+  }
+}

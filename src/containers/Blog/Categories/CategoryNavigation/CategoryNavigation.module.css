@@ -1,0 +1,88 @@
+.Body .Container .Collection {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.Body .Container {
+  position: relative;
+}
+
+.Body .Container .SearchBar {
+  display: flex;
+  align-items: center;
+  animation: fade-in forwards 300ms ease-in-out;
+}
+
+.Body .Container .SearchBar .Input {
+  font-size: 16px;
+  color: #4c5073;
+  width: 100%;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+}
+
+.Body .Container .SearchBar .CloseIcon {
+  margin-left: auto;
+}
+
+.Body .Container .Heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  min-height: 31px;
+}
+
+.Body .Container .Icon {
+  color: var(--color-bg-primary);
+  font-size: 24px;
+}
+
+.Body .Container .Button {
+  border: none;
+  background: unset;
+  cursor: pointer;
+}
+
+.Body .Container .Collection::-webkit-scrollbar {
+  display: none;
+}
+
+.Body {
+  padding: 20px 0 30px 0;
+  border-bottom: 1px solid rgba(11, 19, 90, 0.13);
+}
+
+.Body .Search {
+  position: relative;
+}
+
+.Body .Search .SearchResult {
+  position: absolute;
+  z-index: 9;
+  top: 70px;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

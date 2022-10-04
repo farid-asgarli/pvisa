@@ -1,0 +1,23 @@
+.Body {
+  background: #eaeef4;
+  padding: 30px 0;
+}
+
+.Body .Collection {
+  margin-top: 30px;
+}
+
+.Body .Arrow {
+  top: 40%;
+}
+
+.Body .ArrowLeft {
+  left: -55px;
+}
+
+.Body .ArrowRight {
+  right: -55px;
+}
+
+@media screen and (max-width: 868px) {
+}

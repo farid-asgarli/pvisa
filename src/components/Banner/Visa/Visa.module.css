@@ -1,0 +1,45 @@
+.Body {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Body .CountryPicks {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-left: -40px;
+  margin-top: 50px;
+}
+
+.FlagImage {
+  width: 22px;
+  height: 15px;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .Body {
+    height: unset;
+    padding: 50px 0;
+  }
+
+  .Body .CountryPicks {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: unset;
+  }
+
+  .Body .CountryPicks .SearchBar {
+    width: 100%;
+    max-width: 100%;
+  }
+}

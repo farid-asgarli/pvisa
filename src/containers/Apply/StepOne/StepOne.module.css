@@ -1,0 +1,33 @@
+.Body .Collection {
+  padding: 50px 0;
+}
+
+.Body .ArrowLeft {
+  left: -55px;
+}
+
+.Body .ArrowRight {
+  right: -55px;
+}
+
+.Body .Error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 20px;
+}
+
+.Body .Error .Icon {
+  font-size: 60px;
+  color: var(--color-hover-primary);
+}
+.Body .Error .Message {
+  font-size: 16px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.Body .Error .Button {
+  margin-top: 30px;
+}

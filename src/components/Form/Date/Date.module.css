@@ -1,0 +1,16 @@
+.Body input,
+input.Body {
+  height: 60px;
+  /* border: 1px solid rgba(11, 19, 90, 0.21); */
+  font-size: 16px;
+  width: 100%;
+}
+
+.Body {
+  width: 100%;
+}
+
+.Body input::placeholder,
+input::placeholder.Body {
+  color: var(--color-text-primary);
+}

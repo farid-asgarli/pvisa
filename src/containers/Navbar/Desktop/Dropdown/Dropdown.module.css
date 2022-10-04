@@ -1,0 +1,20 @@
+.Dropdown {
+  height: 42px !important;
+  width: 70px;
+  border: 2px solid #8a8fb8;
+  border-radius: var(--border-radius-primary);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 25.76px;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.DropdownIcon {
+  margin-left: 10px;
+  font-weight: 600;
+}

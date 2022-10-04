@@ -1,0 +1,89 @@
+.Body .Overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) -115.28%,
+    rgba(0, 0, 0, 0) 196.98%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Body .CarouselItem {
+  height: 405px;
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+  position: relative;
+}
+
+.Body .Collection .Card {
+  position: relative;
+  transform: translateY(150px);
+}
+
+.Body .Collection .Title {
+  font-weight: 600;
+  font-size: 32px;
+  color: #fff;
+  position: relative;
+  height: min-content;
+  line-height: 1.8;
+  margin-top: 10px;
+  position: relative;
+  z-index: 99;
+}
+
+.Body .Collection .Title::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 100%;
+  background-color: #fff;
+  left: -15%;
+  border-radius: var(--border-radius-primary);
+}
+
+.Body .Collection .ItemContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Body .Arrows {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  transform: translateY(-40px);
+}
+
+.Body .Arrows .Arrow {
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .Body .Collection .ItemContent {
+    display: block;
+  }
+
+  .Body .Collection .Card {
+    transform: unset;
+  }
+  .Body .CarouselItem {
+    height: unset;
+  }
+
+  .Body .Collection .Title {
+    margin-left: 20px;
+  }
+
+  .Body .Collection .Title::before {
+    left: -5%;
+  }
+
+  .Body .Arrows {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,60 @@
+.Body {
+  display: flex;
+  align-items: center;
+}
+
+.Heading {
+  color: var(--color-text-white) !important;
+  font-size: 46px !important;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+  position: relative;
+  max-width: 50%;
+  margin-bottom: unset !important;
+}
+
+.Heading span {
+  margin-right: 15px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.Heading span:not(.LightText) {
+  text-transform: capitalize;
+}
+
+.Heading.Highlighted .WordToHighlight {
+  font-weight: 600;
+}
+
+.Heading.Highlighted {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-weight: 300;
+}
+
+.Heading::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 0;
+  height: 150%;
+  width: 8px;
+  transform: translateY(-20%);
+  background-color: var(--color-bg-secondary);
+  border-radius: 20px;
+}
+
+.LightText {
+  font-weight: 300 !important;
+}
+
+@media screen and (max-width: 992px) {
+  .Heading {
+    max-width: 100%;
+    font-size: 34px !important;
+    margin-left: 40px;
+  }
+}

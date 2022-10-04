@@ -1,0 +1,12 @@
+.splide__pagination.splide__pagination--ltr {
+  bottom: -2.5em;
+}
+
+.splide__pagination__page.is-active {
+  background-color: var(--color-primary);
+}
+
+.splide__pagination__page {
+  width: 12px;
+  height: 12px;
+}

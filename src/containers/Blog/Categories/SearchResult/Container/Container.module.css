@@ -1,0 +1,42 @@
+.Body {
+  max-height: 300px;
+  width: 100%;
+  box-shadow: var(--box-shadow-primary);
+  border-radius: var(--border-radius-primary);
+  background-color: #fff;
+  padding: 10px 0;
+  overflow-y: scroll;
+}
+
+.Body .Collection {
+  display: flex;
+  flex-direction: column;
+}
+
+.Body .ResultItem {
+  margin: 2px 0;
+}
+
+.Body .Loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Body .Loader .Text,
+.Body .Empty .Text {
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.Body .Empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Body .Empty .Icon {
+  font-size: 20px;
+}

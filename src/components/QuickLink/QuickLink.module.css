@@ -1,0 +1,28 @@
+.Body {
+  border-bottom: 1px solid rgba(11, 19, 90, 0.13);
+  line-height: 130%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.Body .Content {
+  color: #333544;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.Body .Icon {
+  font-size: 25px;
+}
+
+.Body .Icon.GlobeIcon {
+  color: var(--color-text-content);
+}
+
+.Body .Icon.LinkIcon {
+  color: var(--color-text-primary);
+  margin-left: auto;
+}

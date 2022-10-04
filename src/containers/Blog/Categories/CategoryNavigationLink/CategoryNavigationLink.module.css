@@ -1,0 +1,23 @@
+.Body {
+  display: block;
+  white-space: nowrap;
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--color-text-content);
+}
+
+.Body.Active::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-hover-primary);
+  width: 50%;
+  height: 1px;
+  left: 0;
+  bottom: 0px;
+}
+
+.Body.Active {
+  color: var(--color-hover-primary);
+}

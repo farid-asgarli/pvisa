@@ -1,0 +1,37 @@
+.Body {
+  background: #f7f7fb;
+  padding: 40px;
+  border-radius: var(--border-radius-primary);
+}
+
+.Body .FormContent {
+  margin-top: 30px;
+}
+
+.Body .FormContent .Inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  row-gap: 25px;
+}
+
+.Body .FormContent .TextArea {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.Body .FormContent .Bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.Body .FormContent .Bottom .Button {
+  min-width: 200px;
+}
+
+@media screen and (max-width: 870px) {
+  .Body .FormContent .Inputs {
+    grid-template-columns: 1fr;
+  }
+}

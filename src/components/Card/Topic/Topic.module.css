@@ -1,0 +1,23 @@
+.ImageWrapper {
+  overflow: hidden;
+  height: 150px;
+  width: 100%;
+  border-radius: var(--border-radius-primary);
+}
+.Image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Body .Content .Title {
+  text-align: center;
+  font-size: 18px;
+  color: var(--color-text-primary);
+}
+.Content {
+  margin-top: 10px;
+}
+
+/* .Body {
+  width: 150px;
+} */

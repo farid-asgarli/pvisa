@@ -1,0 +1,36 @@
+.Body {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.Body .Link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #000;
+}
+
+.Body .Link.CategoryTitle {
+  position: relative;
+}
+.Body .Link.CategoryTitle::after,
+.Body .Link.CategoryTitle::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #c4c4c4;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.Body .Link.CategoryTitle::after {
+  left: -20px;
+}
+
+.Body .Link.CategoryTitle::before {
+  right: -20px;
+}

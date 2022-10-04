@@ -1,0 +1,44 @@
+.Body {
+  max-width: 1320px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .Body {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Body {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .Body {
+    max-width: 840px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .Body {
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Body {
+    max-width: 540px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .Body {
+    max-width: 100%;
+  }
+}

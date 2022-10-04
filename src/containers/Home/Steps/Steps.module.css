@@ -1,0 +1,23 @@
+.CardsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 40px;
+  margin-top: 70px;
+}
+
+.Body {
+  margin: 40px 0;
+}
+
+.Heading {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+  .CardsList {
+    grid-template-columns: 1fr;
+  }
+}
