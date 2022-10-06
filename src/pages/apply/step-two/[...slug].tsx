@@ -38,6 +38,12 @@ export const getServerSideProps: GetServerSideProps<
   Emptiable<Pages.Apply.StepTwo.PageProps>
 > = async (context) => {
   const query = context.query as unknown as Pages.Apply.StepTwo.QueryParams;
+  const { from, residence, to, type } = query;
+
+  if (!from || !to || !residence || !type)
+    return {
+      notFound: true,
+    };
 
   try {
     // TODO : Change example id (139185) back to `query.type`

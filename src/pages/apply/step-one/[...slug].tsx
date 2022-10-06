@@ -31,6 +31,11 @@ export const getServerSideProps: GetServerSideProps<
   const { from, to, residence } =
     context.query as Pages.Apply.StepOne.QueryParams;
 
+  if (!from || !to || !residence)
+    return {
+      notFound: true,
+    };
+
   return await dynamicErrorHandler<
     CombinationsType.FilterResponse,
     Emptiable<Pages.Apply.StepOne.PageProps>

@@ -26,6 +26,11 @@ export const getServerSideProps: GetServerSideProps<
 > = async (context) => {
   const query = context.query as unknown as Pages.Apply.StepThree.QueryParams;
 
+  if (!query.id)
+    return {
+      notFound: true,
+    };
+
   try {
     const orderResponse = await agent.Aboena.OrderGroupById(query.id);
     return {
