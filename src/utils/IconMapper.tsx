@@ -15,7 +15,7 @@ const retrieveIcon = (iconName: PhosphorIconsCollection) => {
       require(`phosphor-react/dist/icons/${iconName}.esm.js`).default;
     return ComponentToRender;
   } catch (error) {
-    return React.Fragment;
+    return undefined;
   }
 };
 
@@ -42,7 +42,7 @@ function RenderIcon({
   ...props
 }: PhosphorIconProps<{ iconName: PhosphorIconsCollection }>) {
   const IconToRender = retrieveIcon(iconName);
-  return <IconToRender {...props} />;
+  return IconToRender ? <IconToRender {...props} /> : <></>;
 }
 
 export { quickShareLinksMapper, RenderIcon };
