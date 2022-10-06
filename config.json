@@ -1,34 +1,29 @@
-{
-  "id": 1,
-  "name": "visaturkey.com",
-  "url": "https://visaturkey.com",
-  "is_active": true,
-  "languages": [
-    {
-      "id": 1,
-      "name": "Türkçe",
-      "short_code": "tr",
-      "is_active": true,
-      "is_main": true
+[
+  {
+    "id": 2,
+    "name": "australia-eta.org",
+    "url": "https://australia-eta.org",
+    "is_active": true,
+    "languages": [
+      {
+        "id": 3,
+        "name": "English",
+        "short_code": "en",
+        "is_active": true,
+        "is_main": true
+      }
+    ],
+    "logo": {
+      "file": "http://165.227.144.74/media/logo/Logo2x_1.png"
     },
-    {
-      "id": 2,
-      "name": "English",
-      "short_code": "en",
-      "is_active": true,
-      "is_main": false
+    "hero_image": {
+      "file": "http://165.227.144.74/media/hero/2_ci_banner_1_lay_1.png"
+    },
+    "country": {
+      "alpha_2_code": "AU",
+      "alpha_3_code": "AUS",
+      "numeric_code": "036",
+      "name": "Australia"
     }
-  ],
-  "logo": {
-    "file": "http://165.227.144.74/media/logo/Logo2x.png"
-  },
-  "hero_image": {
-    "file": "http://165.227.144.74/media/hero/me.png"
-  },
-  "country": {
-    "alpha_2_code": "TR",
-    "alpha_3_code": "TUR",
-    "numeric_code": "792",
-    "name": "Turkey"
   }
-}
+]
