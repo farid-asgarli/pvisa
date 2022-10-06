@@ -1,5 +1,5 @@
 type RouterProps = {
-  locale: DefaultLocale;
+  locale: string;
   localePathname?: string;
   push: (
     url: string,

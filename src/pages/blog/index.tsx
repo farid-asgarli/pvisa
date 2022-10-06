@@ -122,7 +122,7 @@ export default Index;
 export const getStaticProps: GetStaticProps<
   Pages.Blog.Index.PageProps
 > = async (context) => {
-  const locale = context.locale as DefaultLocale;
+  const locale = context.locale!;
   try {
     const blogsResponse = await agent.Blogs.Posts({
       lang: locale,

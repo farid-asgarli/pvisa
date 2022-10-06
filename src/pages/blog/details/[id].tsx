@@ -57,7 +57,7 @@ export default Details;
 export const getServerSideProps: GetServerSideProps<
   Pages.Blog.Details.PageProps
 > = async (context) => {
-  const locale = context.locale as DefaultLocale;
+  const locale = context.locale!;
 
   try {
     const recentPostsResponse = await agent.Blogs.Posts({

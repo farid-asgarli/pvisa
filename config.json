@@ -5,18 +5,18 @@
   "is_active": true,
   "languages": [
     {
-      "id": 2,
-      "name": "English",
-      "short_code": "en",
-      "is_active": true,
-      "is_main": false
-    },
-    {
       "id": 1,
       "name": "Türkçe",
       "short_code": "tr",
       "is_active": true,
       "is_main": true
+    },
+    {
+      "id": 2,
+      "name": "English",
+      "short_code": "en",
+      "is_active": true,
+      "is_main": false
     }
   ],
   "logo": {

@@ -33,7 +33,7 @@ type BannerComponent = {
       imageUrl?: string;
       url?: string;
     }[];
-    locale: DefaultLocale;
+    locale: string;
     templateVariables: CommonContent.TemplateVariable[];
   }>;
 };

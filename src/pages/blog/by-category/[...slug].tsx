@@ -45,7 +45,7 @@ export default ByCategory;
 export const getServerSideProps: GetServerSideProps<
   Pages.Blog.ByCategory.PageProps
 > = async (context) => {
-  const locale = context.locale as DefaultLocale;
+  const locale = context.locale!;
   try {
     const categorySlug = context.query?.slug?.[0];
     const blogsResponse = await agent.Blogs.Posts({

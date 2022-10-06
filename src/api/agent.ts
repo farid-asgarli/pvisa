@@ -114,13 +114,13 @@ const AceMock = {
 };
 
 const Blogs = {
-  Categories: (lang: DefaultLocale) =>
+  Categories: (lang: string) =>
     BlogsApi.get<BlogsType.CategoriesResponse>("categories", {
       headers: {
         "Accept-Language": lang,
       },
     }).then(responseBody),
-  Details: (slug: string, lang: DefaultLocale) =>
+  Details: (slug: string, lang: string) =>
     BlogsApi.get<BlogsType.PostDetailsResponse>(`posts/${slug}`, {
       headers: {
         "Accept-Language": lang,

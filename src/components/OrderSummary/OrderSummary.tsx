@@ -23,10 +23,6 @@ const OrderSummary: DivElement<{
   templateVariables,
   ...props
 }) => {
-  const { locale: l } = useRouter();
-
-  const locale = l as DefaultLocale;
-
   const processingCollection = [
     {
       key: t("order_summary_frocessing_fee", templateVariables),

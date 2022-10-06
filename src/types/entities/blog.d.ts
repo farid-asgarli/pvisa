@@ -14,7 +14,7 @@ declare namespace BlogsType {
 
   type DetailsMeta = {
     translations: {
-      [K in DefaultLocale]: string;
+      [key: string]: string;
     };
   };
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import * as PhosphorIcons from "phosphor-react";
+import React from "react";
 import { SocialNetworks } from "../static/EntityTypes";
 import { QuickShareLink } from "../static/QuickShareIcons";
 
@@ -9,9 +10,13 @@ export type PhosphorIconsCollection = keyof Omit<
 >;
 
 const retrieveIcon = (iconName: PhosphorIconsCollection) => {
-  const ComponentToRender: IconType =
-    require(`phosphor-react/dist/icons/${iconName}.esm.js`).default;
-  return ComponentToRender;
+  try {
+    const ComponentToRender: IconType =
+      require(`phosphor-react/dist/icons/${iconName}.esm.js`).default;
+    return ComponentToRender;
+  } catch (error) {
+    return React.Fragment;
+  }
 };
 
 const quickShareLinksMapper = (

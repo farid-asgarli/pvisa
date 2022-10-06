@@ -143,11 +143,6 @@
     "unique_identifier": "apply_select_nationality",
     "translation": "Choose your Nationality"
   },
-  { "unique_identifier": "about_us_title", "translation": "About Us - EN" },
-  {
-    "unique_identifier": "about_us_content",
-    "translation": "Vizam.az is an online platform that provides services in obtaining travel, education and business trip visas to any country worldwide. Visa application processes are complex, time-consuming and require a detailed approach. Our company does its best to help its customers to get a visa and minimizes their involvement in the process. The user-friendly interface of our website, specialization exclusively in visa issues and wide database, containing all information about visa requirements of any country in the world make Vizam.az unique in the service market."
-  },
   {
     "unique_identifier": "order_summary_title",
     "translation": "Order Summary"
