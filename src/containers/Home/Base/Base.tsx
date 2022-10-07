@@ -4,7 +4,6 @@ import { Banner } from "../../../models/components/Banner";
 import { Home } from "../../../models/containers/Home";
 import { getAppConfig } from "../../../utils/CommonContent";
 import { concatStyles } from "../../../utils/Concatinator";
-import { RenderIcon } from "../../../utils/IconMapper";
 import { t } from "../../../utils/Localization";
 import styles from "./Base.module.css";
 const Base: typeof Home.Base = ({
