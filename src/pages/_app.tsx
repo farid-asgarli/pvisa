@@ -47,14 +47,12 @@ MyApp.getInitialProps = async (
     router: LocalizationPath;
   }
 ) => {
-  const templateVariables = await getTemplateVariables(context.router.locale);
-
   const language = getCurrentLocale(context.router.locale);
 
+  const templateVariables = await getTemplateVariables(context.router.locale);
   const callToActionsResponse = await agent.CommonContent.CallToActions(
     language?.id!
   );
-
   const countries = await agent.AceMock.All();
 
   return {

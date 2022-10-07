@@ -49,14 +49,14 @@ function getStaticContentByKey(
   key: string,
   staticContents: CommonContent.StaticContent[]
 ): Indefinable<CommonContent.StaticContent> {
-  return staticContents.find((x) => x.unique_identifier === key);
+  return staticContents?.find((x) => x?.unique_identifier === key);
 }
 
 function getCallToActionByKey(
   key: string,
   callToActions: CommonContent.CallToAction[]
 ): Indefinable<CommonContent.CallToAction> {
-  return callToActions.find((x) => x.unique_identifier === key);
+  return callToActions?.find((x) => x?.unique_identifier === key);
 }
 
 export {
