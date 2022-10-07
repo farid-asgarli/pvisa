@@ -8,6 +8,7 @@ declare type CommonPageProps = {
   staticContents: CommonContent.StaticContent[];
   templateVariables: CommonContent.TemplateVariable[];
   callToActions: CommonContent.CallToAction[];
+  countries: CountryType.Extended[];
 };
 
 declare namespace Pages {

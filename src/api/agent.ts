@@ -3,7 +3,7 @@ import axios, {
   AxiosRequestTransformer,
   AxiosResponse,
 } from "axios";
-import countries from "../data/countries.json";
+import localData from "../data/countries.json";
 import { AuthTokens, UrlCollection } from "../globals";
 import { StringExtensions } from "../extensions/String";
 
@@ -110,7 +110,7 @@ const Ace = {
 
 const AceMock = {
   All: () =>
-    new Promise<CountryType.Extended[]>((res) => res(countries.countries.all)),
+    new Promise<CountryType.Extended[]>((res) => res(localData.countries)),
 };
 
 const Blogs = {

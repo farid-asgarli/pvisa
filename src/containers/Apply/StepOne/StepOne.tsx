@@ -8,23 +8,29 @@ import {
 import { useRouter } from "next/router";
 import { Planet } from "phosphor-react";
 import Wrapper from "../../../components/Wrapper/Wrapper";
+import { UrlCollection } from "../../../globals";
 import { Banner } from "../../../models/components/Banner";
 import { Button } from "../../../models/components/Button";
 import { Card } from "../../../models/components/Card";
 import { Carousel } from "../../../models/components/Carousel";
 import { Apply } from "../../../models/containers/Apply";
 import { commonSlideProps } from "../../../static/CommonSlideProps";
+import { getAppConfig } from "../../../utils/CommonContent";
 import { concatStyles } from "../../../utils/Concatinator";
 import { t } from "../../../utils/Localization";
 import styles from "./StepOne.module.css";
+
 const StepOne: typeof Apply.StepOne = ({
   className,
   children,
   queryParams,
   items,
+  countries,
   templateVariables,
   ...props
 }) => {
+  const { country, hero_image } = getAppConfig();
+
   const slideProps: SplideProps = {
     ...commonSlideProps,
     options: {
@@ -44,23 +50,28 @@ const StepOne: typeof Apply.StepOne = ({
     },
   };
 
-  const { push, locale } = useRouter();
+  const { push } = useRouter();
+
+  const flagUrl =
+    UrlCollection.ACEIMAGEURL! +
+    countries.find((x) => x.alpha_3_code === country.alpha_3_code)?.flag_icon;
 
   return (
     <div className={concatStyles(styles.Body, className)} {...props}>
       <Banner.Visa
-        heading={"Turkey Visa"}
-        imageUrl="/assets/images/banner/2.png"
+        heading={`${country.name} Visa`}
+        imageUrl={hero_image.file}
         queryParams={queryParams}
+        countries={countries}
         flagImage={
           <img
-            alt="flag"
+            alt={country.name}
             style={{
               position: "relative",
               width: 50,
               marginLeft: 20,
             }}
-            src="/assets/images/flags/turkey.svg"
+            src={flagUrl}
           />
         }
       />

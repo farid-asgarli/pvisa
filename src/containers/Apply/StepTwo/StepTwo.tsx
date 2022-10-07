@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Checkbox, Divider } from "antd";
-import { MinusCircle, PlusCircle, User, X } from "phosphor-react";
+import { MinusCircle, PlusCircle, User } from "phosphor-react";
 import React, { useState } from "react";
 import OrderSummary from "../../../components/OrderSummary/OrderSummary";
 import Wrapper from "../../../components/Wrapper/Wrapper";
@@ -20,6 +20,7 @@ import agent from "../../../api/agent";
 import { StringExtensions } from "../../../extensions/String";
 import { t } from "../../../utils/Localization";
 import { getAppConfig } from "../../../utils/CommonContent";
+import { UrlCollection } from "../../../globals";
 
 const StepTwo: typeof Apply.StepTwo = ({
   className,
@@ -30,6 +31,7 @@ const StepTwo: typeof Apply.StepTwo = ({
   eligibilityFields,
   filterResponse,
   templateVariables,
+  countries,
   ...props
 }) => {
   const getVisaSubType = (id: number) =>
@@ -44,7 +46,11 @@ const StepTwo: typeof Apply.StepTwo = ({
   const [nextPageUrl, setNextPageUrl] = useState<string>();
   const [promoCode, setPromoCode] = useState<string>(StringExtensions.Empty);
 
-  const { country } = getAppConfig();
+  const { country, hero_image } = getAppConfig();
+
+  const flagUrl =
+    UrlCollection.ACEIMAGEURL! +
+    countries.find((x) => x.alpha_3_code === country.alpha_3_code)?.flag_icon;
 
   const { formInstance, mapFields, mapSubmittedForm, resetFields } =
     useFormManagement();
@@ -154,19 +160,20 @@ const StepTwo: typeof Apply.StepTwo = ({
       )}
       <Banner.Visa
         heading={`${country.name} Visa`}
-        imageUrl="/assets/images/banner/2.png"
+        imageUrl={hero_image.file}
         flagImage={
           <img
-            alt="flag"
+            alt={country.name}
             style={{
               position: "relative",
               width: 50,
               marginLeft: 20,
             }}
-            src="/assets/images/flags/turkey.svg"
+            src={flagUrl}
           />
         }
         queryParams={queryParams}
+        countries={countries}
       />
       <Wrapper>
         <div className={styles.MainContent}>

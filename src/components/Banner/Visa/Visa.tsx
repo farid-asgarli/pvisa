@@ -18,15 +18,10 @@ const Visa: typeof Banner.Visa = ({
   heading,
   flagImage,
   queryParams,
+  countries,
   style,
   ...props
 }) => {
-  const [countries, setCountries] = useState<CountryType.Extended[]>();
-
-  useEffect(() => {
-    agent.AceMock.All().then(setCountries);
-  }, [countries]);
-
   const router = useRouter();
 
   const handleParamsChange = (type: "from" | "residence", val: string) => {

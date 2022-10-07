@@ -14,6 +14,7 @@ const StepTwo: NextPage<CommonPageProps & Pages.Apply.StepTwo.PageProps> = ({
   eligibilityFields,
   filterResponse,
   templateVariables,
+  countries,
 }) => {
   return (
     <Page.Item suppressHydrationWarning backgroundColor={BackgroundColors.Blue}>
@@ -26,6 +27,7 @@ const StepTwo: NextPage<CommonPageProps & Pages.Apply.StepTwo.PageProps> = ({
           eligibilityFields={eligibilityFields}
           filterResponse={filterResponse}
           templateVariables={templateVariables}
+          countries={countries}
         />
       )}
     </Page.Item>

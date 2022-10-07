@@ -13,6 +13,7 @@ const Index: NextPage<Pages.Home.PageProps & CommonPageProps> = ({
   templateVariables,
   usefulLinks,
   applicationSteps,
+  countries,
   ...props
 }) => {
   return (
@@ -23,6 +24,7 @@ const Index: NextPage<Pages.Home.PageProps & CommonPageProps> = ({
         links={usefulLinks}
         steps={applicationSteps}
         templateVariables={templateVariables}
+        countries={countries}
       />
     </Page.Item>
   );

@@ -2,7 +2,6 @@ import { Radio } from "antd";
 import Title from "antd/lib/typography/Title";
 import { useRouter } from "next/router";
 import { useState } from "react";
-
 import { Button } from "../../../models/components/Button";
 import { Card } from "../../../models/components/Card";
 import { concatStyles } from "../../../utils/Concatinator";
@@ -17,9 +16,10 @@ const Visa: typeof Card.Visa = ({
   templateVariables,
   ...props
 }) => {
+  const nonExistingVisaSubType = "---";
   const [selected, setSelected] = useState<VisaType.SubType>(sub_types[0]);
 
-  const { push, locale } = useRouter();
+  const { push } = useRouter();
 
   const handleSelect = (value: number) => {
     const itemToFind = sub_types.find((x) => x.id === value);
@@ -45,16 +45,16 @@ const Visa: typeof Card.Visa = ({
           value={selected.id}
           className={styles.RadioGroup}
         >
-          {sub_types.map(({ id, title }) => (
+          {sub_types.map((st) => (
             <Radio
-              key={id}
+              key={st.id}
               className={concatStyles(
                 styles.RadioInput,
-                selected.id === id && styles.Active
+                selected.id === st.id && styles.Active
               )}
-              value={id}
+              value={st.id}
             >
-              {title}
+              {st.title === nonExistingVisaSubType ? title : st.title}
             </Radio>
           ))}
         </Radio.Group>

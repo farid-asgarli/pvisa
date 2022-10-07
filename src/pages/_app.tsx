@@ -54,10 +54,14 @@ MyApp.getInitialProps = async (
   const callToActionsResponse = await agent.CommonContent.CallToActions(
     language?.id!
   );
+
+  const countries = await agent.AceMock.All();
+
   return {
     pageProps: {
       templateVariables,
       callToActions: callToActionsResponse.call_to_actions,
+      countries,
     },
   } as any;
 };

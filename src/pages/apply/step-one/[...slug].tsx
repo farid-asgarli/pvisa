@@ -1,5 +1,4 @@
 import { GetServerSideProps, NextPage } from "next";
-import Head from "next/head";
 import agent from "../../../api/agent";
 import { Page } from "../../../models/components/Page";
 import { Apply } from "../../../models/containers/Apply";
@@ -9,6 +8,7 @@ import { mapPageHead } from "../../../utils/PageHeadMapper";
 
 const StepOne: NextPage<CommonPageProps & Pages.Apply.StepOne.PageProps> = ({
   templateVariables,
+  countries,
   ...props
 }) => {
   return (
@@ -18,6 +18,7 @@ const StepOne: NextPage<CommonPageProps & Pages.Apply.StepOne.PageProps> = ({
         items={props?.filterResponse?.visa_types}
         queryParams={props.queryParams}
         templateVariables={templateVariables}
+        countries={countries}
       />
     </Page.Item>
   );
@@ -46,10 +47,13 @@ export const getServerSideProps: GetServerSideProps<
         travel_to: to.toUpperCase(),
         resident_of: residence.toUpperCase(),
       }),
-    (response) => ({
-      filterResponse: response,
-      queryParams: context.query,
-    }),
+    (response) => {
+      console.log(response.visa_types.flatMap((x) => x.sub_types));
+      return {
+        filterResponse: response,
+        queryParams: context.query,
+      };
+    },
     (error) => {
       if (error.response?.status === 404)
         return {

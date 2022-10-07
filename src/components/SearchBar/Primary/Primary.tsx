@@ -3,8 +3,7 @@
 import { Select } from "antd";
 import { useRouter } from "next/router";
 import { CaretDown } from "phosphor-react";
-import { useEffect, useMemo, useState } from "react";
-import agent from "../../../api/agent";
+import { useMemo, useState } from "react";
 import { StringExtensions } from "../../../extensions/String";
 import { UrlCollection } from "../../../globals";
 import { Button } from "../../../models/components/Button";
@@ -17,21 +16,16 @@ const Primary: typeof SearchBar.Primary = ({
   className,
   children,
   templateVariables,
+  countries,
   ...props
 }) => {
   const { push, locale } = useRouter();
-
-  const [countries, setCountries] = useState<CountryType.Extended[]>();
 
   const { country } = getAppConfig();
 
   const [selectedCountry, setSelectedCountry] = useState<string>(
     country.alpha_3_code
   );
-
-  useEffect(() => {
-    agent.AceMock.All().then(setCountries);
-  }, [countries]);
 
   const countriesSelect = useMemo(
     () =>

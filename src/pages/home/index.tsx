@@ -1,5 +1,4 @@
 import { GetStaticProps, NextPage } from "next";
-import getConfig from "next/config";
 import React from "react";
 import agent from "../../api/agent";
 import { Page } from "../../models/components/Page";
@@ -14,7 +13,7 @@ const Index: NextPage<Pages.Home.PageProps & CommonPageProps> = ({
   templateVariables,
   usefulLinks,
   applicationSteps,
-  ...props
+  countries,
 }) => {
   return (
     <Page.Item backgroundColor={BackgroundColors.Blue}>
@@ -24,6 +23,7 @@ const Index: NextPage<Pages.Home.PageProps & CommonPageProps> = ({
         links={usefulLinks}
         steps={applicationSteps}
         templateVariables={templateVariables}
+        countries={countries}
       />
     </Page.Item>
   );

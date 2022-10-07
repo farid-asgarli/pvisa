@@ -10,6 +10,7 @@ type OptionProps = {
 type SearchBarComponent = {
   Primary: DivElement<{
     templateVariables: CommonContent.TemplateVariable[];
+    countries: CountryType.Extended[];
   }>;
   Secondary: DivElement<{
     optionItems?: React.ReactNode;

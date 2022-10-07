@@ -9,6 +9,7 @@ type ApplyComponent = {
     items: Indefinable<VisaType.Base[]>;
     queryParams: Pages.Apply.StepOne.QueryParams;
     templateVariables: CommonContent.TemplateVariable[];
+    countries: CountryType.Extended[];
   }>;
   StepTwo: DivElement<{
     details: AttributesType.AttributeResponse;
@@ -17,6 +18,7 @@ type ApplyComponent = {
     formsData: FormsType.DetailsResponse;
     filterResponse: Nullable<CombinationsType.FilterResponse>;
     templateVariables: CommonContent.TemplateVariable[];
+    countries: CountryType.Extended[];
   }>;
   StepThree: {
     Content: DivElement<{

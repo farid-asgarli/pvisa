@@ -46,6 +46,7 @@ const Dropdown: typeof Navbar.Desktop.Dropdown = ({
         overlay={langMenu}
         placement="bottom"
         className={styles.Dropdown}
+        disabled={languagesList.length === 1}
       >
         <span>
           <span>{languagesList.find((x) => x === locale) ?? locale}</span>

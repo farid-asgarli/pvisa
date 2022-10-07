@@ -14,6 +14,7 @@ const Primary: typeof Banner.Primary = ({
   heading,
   style,
   templateVariables,
+  countries,
   ...props
 }) => {
   return (
@@ -33,6 +34,7 @@ const Primary: typeof Banner.Primary = ({
         <SearchBar.Primary
           templateVariables={templateVariables}
           className={styles.SearchBar}
+          countries={countries}
         />
       </Wrapper>
     </div>
