@@ -39,7 +39,6 @@ export const getStaticProps: GetStaticProps<Pages.Home.PageProps> = async (
   const applicationSteps = await agent.CommonContent.ApplicationSteps(
     locale?.id!
   );
-  console.log(applicationSteps);
   return {
     props: {
       applicationSteps: applicationSteps.application_steps,

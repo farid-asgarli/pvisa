@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import React from "react";
 import { Page } from "../../models/components/Page";
 import { Contact } from "../../models/containers/Contact";
@@ -15,3 +15,9 @@ const Index: NextPage<CommonPageProps> = ({ templateVariables }) => {
 };
 
 export default Index;
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: {},
+  };
+};
