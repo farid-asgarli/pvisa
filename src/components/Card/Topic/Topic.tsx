@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Title from "antd/lib/typography/Title";
+import Link from "next/link";
 import { Card } from "../../../models/components/Card";
 import { concatStyles } from "../../../utils/Concatinator";
 import styles from "./Topic.module.css";
@@ -19,9 +20,13 @@ const Topic: typeof Card.Topic = ({
         )}
       </div>
       <div className={styles.Content}>
-        <Title className={styles.Title} level={5}>
-          {title}
-        </Title>
+        <Link href={href ?? "/"}>
+          <a>
+            <Title className={styles.Title} level={5}>
+              {title}
+            </Title>
+          </a>
+        </Link>
       </div>
     </div>
   );

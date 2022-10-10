@@ -17,6 +17,7 @@ const Primary: typeof SearchBar.Primary = ({
   children,
   templateVariables,
   countries,
+  currentCountry,
   ...props
 }) => {
   const { push, locale } = useRouter();
@@ -24,7 +25,8 @@ const Primary: typeof SearchBar.Primary = ({
   const { country } = getAppConfig();
 
   const [selectedCountry, setSelectedCountry] = useState<string>(
-    country.alpha_3_code
+    countries.find((x) => x.alpha_2_code === currentCountry)?.alpha_3_code ??
+      country.alpha_3_code
   );
 
   const countriesSelect = useMemo(
@@ -82,7 +84,9 @@ const Primary: typeof SearchBar.Primary = ({
         <Button.Primary
           onClick={() =>
             push(
-              `/apply/step-one/params?to=${selectedCountry.toUpperCase()}&from=AZE&residence=AZE`
+              `/apply/step-one/params?to=${
+                country.alpha_3_code
+              }&from=${selectedCountry.toUpperCase()}&residence=${selectedCountry.toUpperCase()}`
             )
           }
         >

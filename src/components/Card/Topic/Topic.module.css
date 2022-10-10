@@ -13,9 +13,14 @@
   text-align: center;
   font-size: 18px;
   color: var(--color-text-primary);
+  transition: 0.3s ease-in-out all;
 }
 .Content {
   margin-top: 10px;
+}
+
+.Body .Content .Title:hover {
+  opacity: 0.6;
 }
 
 /* .Body {

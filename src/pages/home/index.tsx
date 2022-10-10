@@ -14,6 +14,8 @@ const Index: NextPage<Pages.Home.PageProps & CommonPageProps> = ({
   usefulLinks,
   applicationSteps,
   countries,
+  currentCountry,
+  ...props
 }) => {
   return (
     <Page.Item backgroundColor={BackgroundColors.Blue}>
@@ -24,6 +26,7 @@ const Index: NextPage<Pages.Home.PageProps & CommonPageProps> = ({
         steps={applicationSteps}
         templateVariables={templateVariables}
         countries={countries}
+        currentCountry={currentCountry}
       />
     </Page.Item>
   );
@@ -40,10 +43,14 @@ export const getStaticProps: GetStaticProps<Pages.Home.PageProps> = async (
   const applicationSteps = await agent.CommonContent.ApplicationSteps(
     locale?.id!
   );
+
+  const currentCountry = agent.GeoLocation.LocateCurrentCountry();
+
   return {
     props: {
       applicationSteps: applicationSteps.application_steps,
       usefulLinks: usefulLinks.usefull_links,
+      currentCountry,
     },
   };
 };

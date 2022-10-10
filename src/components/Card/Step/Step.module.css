@@ -4,6 +4,15 @@
   box-shadow: var(--box-shadow-primary);
   border-radius: var(--border-radius-primary);
   background-color: #fff;
+  transition: 0.3s ease-in-out all;
+}
+
+.Body:hover .Icon {
+  transform: scale(1.1);
+}
+
+.Body:hover {
+  box-shadow: var(--box-shadow-hover);
 }
 
 .Head {
@@ -38,6 +47,7 @@
 .Icon {
   color: #3248e9;
   font-size: 40px;
+  transition: 0.3s ease-in-out all;
 }
 
 @media screen and (max-width: 992px) {

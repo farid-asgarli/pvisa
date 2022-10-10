@@ -7,6 +7,10 @@
   max-width: 365px;
 }
 
+.Body:hover .Icon {
+  transform: scale(1.1);
+}
+
 .Body .Anchor {
   font-weight: 400;
   font-size: 24px;
@@ -28,6 +32,7 @@
 .Body .IconWrapper .Icon {
   font-size: 40px;
   color: var(--color-text-primary);
+  transition: 0.3s ease-in-out all;
 }
 
 @media screen and (max-width: 992px) {

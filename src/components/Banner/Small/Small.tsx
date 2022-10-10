@@ -27,7 +27,7 @@ const Small: typeof Banner.Small = ({
       }}
       {...props}
     >
-      <Overlay />
+      {/* <Overlay /> */}
       <Wrapper>
         <div className={styles.Content}>
           <Title className={styles.Heading}>{children}</Title>

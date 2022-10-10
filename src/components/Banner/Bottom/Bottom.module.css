@@ -8,6 +8,11 @@
   flex-direction: column;
   justify-content: center;
   user-select: none;
+  transition: 0.3s ease-in-out all;
+}
+
+.Body:hover {
+  background-position: 60% 60%;
 }
 
 .Heading {

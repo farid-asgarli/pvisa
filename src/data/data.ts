@@ -270,7 +270,7 @@ const Certificates = [
 
 const ContactLinks = [
   {
-    href: "/",
+    href: "mailto:info@vizam.az",
     icon: Envelope,
     content: "info@vizam.az",
   },
@@ -281,7 +281,7 @@ const ContactLinks = [
       "Baku city, Samad Vurghun str. 43, World Business Center, 20th floor, AZ 1009",
   },
   {
-    href: "/",
+    href: "tel:+994553000135",
     icon: Phone,
     content: "+994 55 300 01 35",
   },

@@ -47,6 +47,7 @@ MyApp.getInitialProps = async (
     router: LocalizationPath;
   }
 ) => {
+  console.log(context.router.locale);
   const language = getCurrentLocale(context.router.locale);
 
   const templateVariables = await getTemplateVariables(context.router.locale);

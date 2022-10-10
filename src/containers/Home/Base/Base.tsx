@@ -14,6 +14,7 @@ const Base: typeof Home.Base = ({
   steps,
   templateVariables,
   countries,
+  currentCountry,
   ...props
 }) => {
   const { hero_image } = getAppConfig();
@@ -25,6 +26,7 @@ const Base: typeof Home.Base = ({
         imageUrl={hero_image.file}
         templateVariables={templateVariables}
         countries={countries}
+        currentCountry={currentCountry}
       />
       <img
         alt="plane"

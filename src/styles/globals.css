@@ -12,6 +12,7 @@
   --color-bg-white: #fff;
 
   --box-shadow-primary: 0px 4px 12px rgba(0, 0, 0, 0.082);
+  --box-shadow-hover: 0px 4px 12px rgba(0, 0, 0, 0.302);
 
   --border-radius-primary: 4px;
 }

@@ -27,7 +27,7 @@ const Bottom: typeof Banner.Bottom = ({
       }}
       {...props}
     >
-      <Overlay />
+      {/* <Overlay /> */}
       <Wrapper>
         <Title className={styles.Heading}>{children}</Title>
         {buttonProps && (

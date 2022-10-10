@@ -8,4 +8,9 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--color-text-primary);
+  transition: 0.1s ease-in-out all;
+}
+
+.Body:hover > a {
+  font-weight: 500;
 }

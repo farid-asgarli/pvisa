@@ -21,9 +21,16 @@
   align-items: center;
   white-space: nowrap;
 }
+.Body .Heading .ViewAll:hover {
+  opacity: 0.8;
+}
+.Body .Heading .ViewAll:hover .ArrowLeftIcon {
+  transform: translateX(10px);
+}
 
 .Body .Heading .ViewAll .ArrowLeftIcon {
   margin-left: 10px;
+  transition: 0.3s ease-in-out all;
 }
 
 @media screen and (max-width: 992px) {

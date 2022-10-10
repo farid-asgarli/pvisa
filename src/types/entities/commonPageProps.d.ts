@@ -16,6 +16,7 @@ declare namespace Pages {
     type PageProps = {
       usefulLinks: CommonContent.UsefulLink[];
       applicationSteps: CommonContent.ApplicationStep[];
+      currentCountry: string;
     };
   }
   namespace Apply {

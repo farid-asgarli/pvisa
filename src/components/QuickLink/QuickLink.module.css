@@ -7,15 +7,25 @@
   padding: 20px 0;
 }
 
+.Body:hover .Content {
+  opacity: 0.6;
+}
+
+.Body:hover .Icon {
+  transform: translateX(-5px);
+}
+
 .Body .Content {
   color: #333544;
   font-weight: 400;
   font-size: 16px;
   margin-left: 20px;
+  transition: 0.3s ease-in-out all;
 }
 
 .Body .Icon {
   font-size: 25px;
+  transition: 0.3s ease-in-out all;
 }
 
 .Body .Icon.GlobeIcon {

@@ -24,8 +24,6 @@ const Topics: typeof Blog.Topics = ({
   templateVariables,
   ...props
 }) => {
-  const { locale } = useRouter();
-
   const slideProps: SplideProps = {
     ...commonSlideProps,
     options: {

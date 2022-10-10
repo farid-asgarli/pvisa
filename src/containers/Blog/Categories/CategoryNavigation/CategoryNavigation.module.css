@@ -25,6 +25,7 @@
   margin-left: 10px;
   outline: none;
   border: none;
+  background-color: transparent;
 }
 
 .Body .Container .SearchBar .CloseIcon {

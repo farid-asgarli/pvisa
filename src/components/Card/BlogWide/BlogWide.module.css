@@ -4,6 +4,15 @@
   border-bottom: 1px solid rgba(11, 19, 90, 0.13);
   display: grid;
   grid-template-columns: 1fr 6fr 4fr;
+  transition: 0.3s ease-in-out all;
+  cursor: pointer;
+}
+.Body:hover {
+  opacity: 0.8;
+}
+
+.Body:hover .Right img {
+  transform: scale(1.02);
 }
 
 .Body .Middle .Title {
@@ -69,8 +78,13 @@
   color: var(--color-text-content);
 }
 
+.Body .Right {
+  overflow: hidden;
+}
+
 .Body .Right img {
   width: 100%;
+  transition: 0.3s ease-in-out all;
 }
 
 @media screen and (max-width: 868px) {

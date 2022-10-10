@@ -1,3 +1,8 @@
 .Body .Image {
   width: 100px;
+  transition: 0.3s ease-in-out all;
+}
+
+.Body:hover .Image {
+  opacity: 0.7;
 }

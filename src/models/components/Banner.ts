@@ -17,6 +17,7 @@ type BannerComponent = {
     heading?: React.ReactNode;
     templateVariables: CommonContent.TemplateVariable[];
     countries: CountryType.Extended[];
+    currentCountry: string;
   }>;
   Visa: DivElement<{
     imageUrl: string;

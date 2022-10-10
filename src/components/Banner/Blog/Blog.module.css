@@ -18,6 +18,11 @@
   background-size: cover;
   padding: 30px 0;
   position: relative;
+  transition: 0.3s ease-in-out all;
+}
+
+.Body .CarouselItem:hover {
+  background-position: 80% 95%;
 }
 
 .Body .Collection .Card {

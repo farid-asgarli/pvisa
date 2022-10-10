@@ -240,6 +240,10 @@ const Forms = {
     }),
 };
 
+const GeoLocation = {
+  LocateCurrentCountry: () => Intl.DateTimeFormat().resolvedOptions().timeZone,
+};
+
 const agent = {
   Aboena,
   Ace,
@@ -248,6 +252,7 @@ const agent = {
   Combinations,
   CommonContent,
   Forms,
+  GeoLocation,
 };
 
 export default agent;
