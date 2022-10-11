@@ -15,7 +15,6 @@ type HomeComponent = {
     links: CommonContent.UsefulLink[];
     routerProps: RouterProps;
     templateVariables: CommonContent.TemplateVariable[];
-    countries: CountryType.Extended[];
     currentCountry: string;
   }>;
 };

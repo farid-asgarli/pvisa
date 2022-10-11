@@ -27,6 +27,7 @@ declare namespace GlobalConfiguration {
     logo: File;
     hero_image: File;
     country: Country;
+    template_variables: Record<number, CommonContent.TemplateVariable[]>;
   };
 
   type AppConfig = {

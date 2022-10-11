@@ -16,7 +16,7 @@ type BannerComponent = {
     imageUrl: string;
     heading?: React.ReactNode;
     templateVariables: CommonContent.TemplateVariable[];
-    countries: CountryType.Extended[];
+
     currentCountry: string;
   }>;
   Visa: DivElement<{
@@ -24,7 +24,6 @@ type BannerComponent = {
     heading?: React.ReactNode;
     flagImage?: React.ReactNode;
     queryParams: Pages.Apply.StepOne.QueryParams;
-    countries: CountryType.Extended[];
   }>;
   Blog: DivElement<{
     items: {

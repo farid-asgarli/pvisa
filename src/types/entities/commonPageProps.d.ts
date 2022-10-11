@@ -8,7 +8,6 @@ declare type CommonPageProps = {
   staticContents: CommonContent.StaticContent[];
   templateVariables: CommonContent.TemplateVariable[];
   callToActions: CommonContent.CallToAction[];
-  countries: CountryType.Extended[];
 };
 
 declare namespace Pages {
@@ -34,7 +33,7 @@ declare namespace Pages {
     namespace StepTwo {
       type PageProps = {
         details: AttributesType.AttributeResponse;
-        eligibilityFields: FormsType.DetailsResponse;
+        eligibilityFields: Nullable<FormsType.DetailsResponse>;
         queryParams: QueryParams;
         formsData: FormsType.DetailsResponse;
         filterResponse: Nullable<CombinationsType.FilterResponse>;

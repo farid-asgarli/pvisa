@@ -254,5 +254,11 @@ label.ant-checkbox-wrapper + label.ant-checkbox-wrapper {
 }
 
 .nationality-select-bar:not(.step-two).ant-select .ant-select-selector {
-  min-width: 170px;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .nationality-select-bar:not(.step-two).ant-select .ant-select-selector {
+    min-width: 100px;
+  }
 }

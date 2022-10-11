@@ -61,6 +61,13 @@
   font-size: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  .OptionLabel {
+    width: 150px;
+    overflow: hidden;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .Body {
     width: 100%;

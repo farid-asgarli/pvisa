@@ -12,7 +12,6 @@ import { mapPageHead } from "../../../utils/PageHeadMapper";
 
 const StepOne: NextPage<CommonPageProps & Pages.Apply.StepOne.PageProps> = ({
   templateVariables,
-  countries,
   ...props
 }) => {
   return (
@@ -22,7 +21,6 @@ const StepOne: NextPage<CommonPageProps & Pages.Apply.StepOne.PageProps> = ({
         items={props?.filterResponse?.visa_types}
         queryParams={props.queryParams}
         templateVariables={templateVariables}
-        countries={countries}
       />
     </Page.Item>
   );

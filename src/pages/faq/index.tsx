@@ -36,6 +36,7 @@ export const getStaticProps: GetStaticProps<Pages.FAQ.PageProps> = async (
       props: {
         data: response,
       },
+      revalidate: 10 * 60 /** seconds */,
     };
   } catch (error) {
     return { notFound: true };

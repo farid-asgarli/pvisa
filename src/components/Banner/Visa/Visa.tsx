@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Select } from "antd";
 import { useRouter } from "next/router";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import agent from "../../../api/agent";
 import { UrlCollection } from "../../../globals";
 import { Banner } from "../../../models/components/Banner";
@@ -18,12 +18,11 @@ const Visa: typeof Banner.Visa = ({
   heading,
   flagImage,
   queryParams,
-  countries,
   style,
   ...props
 }) => {
   const router = useRouter();
-
+  const countries = useMemo(() => agent.AceMock.All(), []);
   const handleParamsChange = (type: "from" | "residence", val: string) => {
     const urlToRedirect =
       type === "from"
@@ -37,7 +36,7 @@ const Visa: typeof Banner.Visa = ({
     () =>
       countries?.map((c) => (
         <Select.Option key={c.alpha_3_code} value={c.alpha_3_code}>
-          <span key={c.alpha_3_code}>{c.alpha_3_code}</span>
+          <span key={c.alpha_3_code}>{c.display_name}</span>
           {c.flag_icon && UrlCollection.ACEIMAGEURL && (
             <img
               alt={c.display_name}

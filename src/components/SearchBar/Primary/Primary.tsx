@@ -4,6 +4,7 @@ import { Select } from "antd";
 import { useRouter } from "next/router";
 import { CaretDown } from "phosphor-react";
 import { useMemo, useState } from "react";
+import agent from "../../../api/agent";
 import { StringExtensions } from "../../../extensions/String";
 import { UrlCollection } from "../../../globals";
 import { Button } from "../../../models/components/Button";
@@ -16,10 +17,11 @@ const Primary: typeof SearchBar.Primary = ({
   className,
   children,
   templateVariables,
-  countries,
   currentCountry,
   ...props
 }) => {
+  const countries = useMemo(() => agent.AceMock.All(), []);
+
   const { push, locale } = useRouter();
 
   const { country } = getAppConfig();
@@ -72,7 +74,9 @@ const Primary: typeof SearchBar.Primary = ({
               className={styles.SelectOption}
               value={c.alpha_3_code}
             >
-              <span key={c.display_name}>{c.display_name}</span>
+              <span className={styles.OptionLabel} key={c.display_name}>
+                {c.display_name}
+              </span>
               <img
                 alt={c.display_name}
                 className={styles.FlagImage}

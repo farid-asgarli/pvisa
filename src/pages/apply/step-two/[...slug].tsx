@@ -14,7 +14,6 @@ const StepTwo: NextPage<CommonPageProps & Pages.Apply.StepTwo.PageProps> = ({
   eligibilityFields,
   filterResponse,
   templateVariables,
-  countries,
 }) => {
   return (
     <Page.Item suppressHydrationWarning backgroundColor={BackgroundColors.Blue}>
@@ -27,7 +26,6 @@ const StepTwo: NextPage<CommonPageProps & Pages.Apply.StepTwo.PageProps> = ({
           eligibilityFields={eligibilityFields}
           filterResponse={filterResponse}
           templateVariables={templateVariables}
-          countries={countries}
         />
       )}
     </Page.Item>
@@ -47,11 +45,21 @@ export const getServerSideProps: GetServerSideProps<
       notFound: true,
     };
 
+  const props: Pages.Apply.StepTwo.PageProps =
+    {} as Pages.Apply.StepTwo.PageProps;
+
   try {
-    // TODO : Change example id (139185) back to `query.type`
     const eligibilityFields = await agent.Forms.GetEvisaFieldsStepOne(
       query.type
     );
+
+    props.eligibilityFields = eligibilityFields;
+  } catch (error) {
+    props.eligibilityFields = null;
+  }
+
+  try {
+    // TODO : Change example id (139185) back to `query.type`
 
     const attrResponse = await agent.Combinations.Attributes(query.type);
 
@@ -68,14 +76,13 @@ export const getServerSideProps: GetServerSideProps<
       resident_of: query.residence.toUpperCase(),
     });
 
+    props.details = attrResponse.data;
+    props.queryParams = query;
+    props.formsData = formsData;
+    props.filterResponse = visaTypeDetails;
+
     return {
-      props: {
-        details: attrResponse.data,
-        queryParams: query,
-        formsData,
-        eligibilityFields: eligibilityFields ?? null,
-        filterResponse: visaTypeDetails,
-      },
+      props,
     };
   } catch (error) {
     const { response } = error as AxiosError<AttributesType.AttributeResponse>;

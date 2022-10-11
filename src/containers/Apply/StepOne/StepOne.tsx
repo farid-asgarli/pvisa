@@ -7,6 +7,8 @@ import {
 } from "@splidejs/react-splide";
 import { useRouter } from "next/router";
 import { Planet } from "phosphor-react";
+import { useMemo } from "react";
+import agent from "../../../api/agent";
 import Wrapper from "../../../components/Wrapper/Wrapper";
 import { UrlCollection } from "../../../globals";
 import { Banner } from "../../../models/components/Banner";
@@ -25,11 +27,11 @@ const StepOne: typeof Apply.StepOne = ({
   children,
   queryParams,
   items,
-  countries,
   templateVariables,
   ...props
 }) => {
   const { country, hero_image } = getAppConfig();
+  const countries = useMemo(() => agent.AceMock.All(), []);
 
   const slideProps: SplideProps = {
     ...commonSlideProps,
@@ -62,7 +64,6 @@ const StepOne: typeof Apply.StepOne = ({
         heading={`${country.name} Visa`}
         imageUrl={hero_image.file}
         queryParams={queryParams}
-        countries={countries}
         flagImage={
           <img
             alt={country.name}

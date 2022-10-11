@@ -4,7 +4,7 @@ import agent from "../api/agent";
 import { Page } from "../models/components/Page";
 import { Home } from "../models/containers/Home";
 import { BackgroundColors } from "../static/PageColors";
-import { getCurrentLocale } from "../utils/CommonContent";
+import { getAppConfig, getCurrentLocale } from "../utils/CommonContent";
 import { t } from "../utils/Localization";
 import { mapPageHead } from "../utils/PageHeadMapper";
 
@@ -13,7 +13,6 @@ const Index: NextPage<Pages.Home.PageProps & CommonPageProps> = ({
   templateVariables,
   usefulLinks,
   applicationSteps,
-  countries,
   currentCountry,
   ...props
 }) => {
@@ -25,7 +24,6 @@ const Index: NextPage<Pages.Home.PageProps & CommonPageProps> = ({
         links={usefulLinks}
         steps={applicationSteps}
         templateVariables={templateVariables}
-        countries={countries}
         currentCountry={currentCountry}
       />
     </Page.Item>
@@ -45,12 +43,12 @@ export const getStaticProps: GetStaticProps<Pages.Home.PageProps> = async (
   );
 
   const currentCountry = agent.GeoLocation.LocateCurrentCountry();
-
   return {
     props: {
       applicationSteps: applicationSteps.application_steps,
       usefulLinks: usefulLinks.usefull_links,
       currentCountry,
     },
+    revalidate: 10 * 60 /** seconds */,
   };
 };

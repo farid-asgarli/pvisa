@@ -140,6 +140,7 @@ export const getStaticProps: GetStaticProps<
         categories: categoriesResponse.data,
         featuredPosts: featuredBlogsResponse.data,
       },
+      revalidate: 10 * 60 /** seconds */,
     };
   } catch (error) {
     return { notFound: true };

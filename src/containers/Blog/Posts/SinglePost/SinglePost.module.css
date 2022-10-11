@@ -4,7 +4,7 @@
 
 .Body .MainContent {
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 7.5fr 2.5fr;
   gap: 50px;
 }
 
@@ -70,6 +70,12 @@
   width: 100%;
   border-radius: var(--border-radius-primary);
   padding: 20px 0;
+}
+
+@media screen and (max-width: 1440px) {
+  .Body .MainContent {
+    grid-template-columns: 7fr 3fr;
+  }
 }
 
 @media screen and (max-width: 992px) {

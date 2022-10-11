@@ -3,20 +3,16 @@ import { Contact } from "../../../models/containers/Contact";
 import { concatStyles } from "../../../utils/Concatinator";
 import styles from "./ApplicationForm.module.css";
 import { Form } from "../../../models/components/Form";
-import { Envelope, Phone, User } from "phosphor-react";
-import TextArea from "antd/lib/input/TextArea";
+import { Envelope, Phone, User, LinkSimpleBreak } from "phosphor-react";
 import { Button } from "../../../models/components/Button";
-import { useRouter } from "next/router";
-
 import { t } from "../../../utils/Localization";
+
 const ApplicationForm: typeof Contact.ApplicationForm = ({
   className,
   children,
   templateVariables,
   ...props
 }) => {
-  const { locale } = useRouter();
-
   return (
     <div className={concatStyles(styles.Body, className)} {...props}>
       <Heading.Secondary>
@@ -37,7 +33,7 @@ const ApplicationForm: typeof Contact.ApplicationForm = ({
             placeholder={t("contact_form_fields_phone", templateVariables)}
           />
           <Form.Input
-            icon={Phone}
+            icon={LinkSimpleBreak}
             placeholder={t("contact_form_fields_subject", templateVariables)}
           />
         </div>

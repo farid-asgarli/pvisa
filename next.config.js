@@ -1,6 +1,6 @@
 const withLess = require("next-with-less");
 
-const appSettings = require("./appInitializer");
+const appSettings = require("./start/appInitializer");
 
 const { runtimeConfig, localizationConfig, lessLoaderConfig } = appSettings;
 

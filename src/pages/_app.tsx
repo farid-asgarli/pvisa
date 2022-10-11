@@ -9,11 +9,7 @@ import { Layout } from "../containers/Layout/Layout";
 import useLocalizationPath, {
   LocalizationPath,
 } from "../hooks/LocalizationPath";
-import {
-  getAppConfig,
-  getCurrentLocale,
-  getTemplateVariables,
-} from "../utils/CommonContent";
+import { getAppConfig, getCurrentLocale } from "../utils/CommonContent";
 import { NextPage, NextPageContext } from "next";
 import agent from "../api/agent";
 
@@ -21,7 +17,7 @@ const MyApp: NextPage<AppProps<CommonPageProps>> = ({
   Component,
   pageProps,
 }) => {
-  const { languages } = getAppConfig();
+  const { languages, template_variables } = getAppConfig();
 
   const routerProps = useLocalizationPath(
     languages.find((x) => x.is_main)?.short_code!
@@ -31,8 +27,8 @@ const MyApp: NextPage<AppProps<CommonPageProps>> = ({
   } = {
     ...pageProps,
     routerProps,
+    templateVariables: template_variables[pageProps.currentLanguage?.id!],
   };
-
   return (
     <Layout commonPageProps={pagePropsWithRouting}>
       <Component {...pagePropsWithRouting} />
@@ -47,20 +43,16 @@ MyApp.getInitialProps = async (
     router: LocalizationPath;
   }
 ) => {
-  console.log(context.router.locale);
   const language = getCurrentLocale(context.router.locale);
 
-  const templateVariables = await getTemplateVariables(context.router.locale);
   const callToActionsResponse = await agent.CommonContent.CallToActions(
     language?.id!
   );
-  const countries = await agent.AceMock.All();
 
   return {
     pageProps: {
-      templateVariables,
       callToActions: callToActionsResponse.call_to_actions,
-      countries,
+      currentLanguage: language,
     },
   } as any;
 };

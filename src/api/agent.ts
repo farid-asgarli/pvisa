@@ -109,8 +109,7 @@ const Ace = {
 };
 
 const AceMock = {
-  All: () =>
-    new Promise<CountryType.Extended[]>((res) => res(localData.countries)),
+  All: () => localData.countries,
 };
 
 const Blogs = {

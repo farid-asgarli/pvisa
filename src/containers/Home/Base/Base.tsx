@@ -13,7 +13,6 @@ const Base: typeof Home.Base = ({
   links,
   steps,
   templateVariables,
-  countries,
   currentCountry,
   ...props
 }) => {
@@ -25,7 +24,6 @@ const Base: typeof Home.Base = ({
         heading={t("banners_home_text", templateVariables)}
         imageUrl={hero_image.file}
         templateVariables={templateVariables}
-        countries={countries}
         currentCountry={currentCountry}
       />
       <img

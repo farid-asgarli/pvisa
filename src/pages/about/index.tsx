@@ -37,5 +37,6 @@ export const getStaticProps: GetStaticProps<Pages.About.PageProps> = async (
     props: {
       staticContents: response.static_contents,
     },
+    revalidate: 10 * 60 /** seconds */,
   };
 };

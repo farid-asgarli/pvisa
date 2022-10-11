@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Checkbox, Divider } from "antd";
 import { MinusCircle, PlusCircle, User } from "phosphor-react";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import OrderSummary from "../../../components/OrderSummary/OrderSummary";
 import Wrapper from "../../../components/Wrapper/Wrapper";
 import { Banner } from "../../../models/components/Banner";
@@ -31,9 +31,10 @@ const StepTwo: typeof Apply.StepTwo = ({
   eligibilityFields,
   filterResponse,
   templateVariables,
-  countries,
   ...props
 }) => {
+  const countries = useMemo(() => agent.AceMock.All(), []);
+
   const getVisaSubType = (id: number) =>
     filterResponse?.visa_types
       .flatMap((x) => x.sub_types)
@@ -147,11 +148,13 @@ const StepTwo: typeof Apply.StepTwo = ({
       className={concatStyles(styles.Body, className)}
       {...props}
     >
-      <Popups.Eligibility
-        serviceId={queryParams.type}
-        formData={eligibilityFields.data}
-        templateVariables={templateVariables}
-      />
+      {eligibilityFields && (
+        <Popups.Eligibility
+          serviceId={queryParams.type}
+          formData={eligibilityFields.data}
+          templateVariables={templateVariables}
+        />
+      )}
       {nextPageUrl && (
         <Popups.SuccessfulPayment
           templateVariables={templateVariables}
@@ -173,7 +176,6 @@ const StepTwo: typeof Apply.StepTwo = ({
           />
         }
         queryParams={queryParams}
-        countries={countries}
       />
       <Wrapper>
         <div className={styles.MainContent}>

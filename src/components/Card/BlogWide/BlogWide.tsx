@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Title from "antd/lib/typography/Title";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { StringExtensions } from "../../../extensions/String";
 import { Card } from "../../../models/components/Card";
 import { Heading } from "../../../models/components/Heading";
 import { quickShareLinks } from "../../../static/QuickShareIcons";
@@ -21,6 +23,8 @@ const BlogWide: typeof Card.BlogWide = ({
   url,
   ...props
 }) => {
+  const { push } = useRouter();
+
   return (
     <div className={concatStyles(styles.Body, className)} {...props}>
       <div className={styles.Left}>
@@ -30,7 +34,11 @@ const BlogWide: typeof Card.BlogWide = ({
       </div>
       <div className={styles.Middle}>
         <div className={styles.MiddleLeft}>
-          <Heading.Secondary as="anchor" href={url ?? ""} size="md">
+          <Heading.Secondary
+            as="anchor"
+            href={url ?? StringExtensions.Empty}
+            size="md"
+          >
             {title}
           </Heading.Secondary>
           {content && (
@@ -58,7 +66,10 @@ const BlogWide: typeof Card.BlogWide = ({
           </div>
         </div>
       </div>
-      <div className={styles.Right}>
+      <div
+        onClick={() => push(url ?? StringExtensions.Empty)}
+        className={styles.Right}
+      >
         <img src={imageUrl} alt={title} />
       </div>
     </div>

@@ -13,9 +13,7 @@ const Index: NextPage<Pages.Home.PageProps & CommonPageProps> = ({
   templateVariables,
   usefulLinks,
   applicationSteps,
-  countries,
   currentCountry,
-  ...props
 }) => {
   return (
     <Page.Item backgroundColor={BackgroundColors.Blue}>
@@ -25,7 +23,6 @@ const Index: NextPage<Pages.Home.PageProps & CommonPageProps> = ({
         links={usefulLinks}
         steps={applicationSteps}
         templateVariables={templateVariables}
-        countries={countries}
         currentCountry={currentCountry}
       />
     </Page.Item>
@@ -52,5 +49,6 @@ export const getStaticProps: GetStaticProps<Pages.Home.PageProps> = async (
       usefulLinks: usefulLinks.usefull_links,
       currentCountry,
     },
+    revalidate: 10 * 60 /** seconds */,
   };
 };
