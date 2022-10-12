@@ -86,6 +86,7 @@ const Primary: typeof SearchBar.Primary = ({
           ))}
         </Select>
         <Button.Primary
+          className={styles.Button}
           onClick={() =>
             push(
               `/apply/step-one/params?to=${

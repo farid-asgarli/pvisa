@@ -310,6 +310,7 @@ const StepTwo: typeof Apply.StepTwo = ({
               filterResponse={filterResponse}
               visaSubType={getVisaSubType(queryParams.type)}
               templateVariables={templateVariables}
+              details={details}
             />
           </div>
         </div>

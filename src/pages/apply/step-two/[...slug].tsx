@@ -62,7 +62,6 @@ export const getServerSideProps: GetServerSideProps<
     // TODO : Change example id (139185) back to `query.type`
 
     const attrResponse = await agent.Combinations.Attributes(query.type);
-
     let formsData: FormsType.DetailsResponse;
 
     if (attrResponse.data.evisa_id && attrResponse.data.evisa_id !== null) {

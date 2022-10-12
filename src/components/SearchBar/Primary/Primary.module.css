@@ -61,6 +61,12 @@
   font-size: 15px;
 }
 
+@media screen and (max-width: 992px) {
+  .Body {
+    width: 100%;
+    height: 130px;
+  }
+}
 @media screen and (max-width: 768px) {
   .OptionLabel {
     width: 150px;
@@ -68,9 +74,24 @@
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 500px) {
+  .OptionLabel {
+    width: 250px;
+  }
   .Body {
+    height: min-content;
+  }
+  .SelectBar {
+    flex-wrap: wrap;
+  }
+  .SelectBar .Button {
+    margin-top: 10px;
     width: 100%;
-    height: 130px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .OptionLabel {
+    width: 180px;
   }
 }

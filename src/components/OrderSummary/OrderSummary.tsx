@@ -1,5 +1,5 @@
 import { Checkbox, Divider } from "antd";
-import { useRouter } from "next/router";
+import { useMemo } from "react";
 import { Button } from "../../models/components/Button";
 import { Form } from "../../models/components/Form";
 import { Heading } from "../../models/components/Heading";
@@ -13,6 +13,7 @@ const OrderSummary: DivElement<{
   promoCode: string;
   setPromoCode: React.Dispatch<React.SetStateAction<string>>;
   templateVariables: CommonContent.TemplateVariable[];
+  details: AttributesType.AttributeResponse;
 }> = ({
   className,
   children,
@@ -21,8 +22,22 @@ const OrderSummary: DivElement<{
   promoCode,
   setPromoCode,
   templateVariables,
+  details,
   ...props
 }) => {
+  const nonExistingVisaSubType = "---";
+  const nonExistingGeneralNote = "<p>-</p>";
+
+  const retrieveExistingType = useMemo(() => {
+    if (visaSubType?.title === nonExistingVisaSubType) {
+      const title = filterResponse?.visa_types.find((x) =>
+        x.sub_types.some((x) => x.id === visaSubType?.id)
+      )?.title;
+      return title;
+    }
+    return visaSubType?.title;
+  }, [filterResponse?.visa_types, visaSubType?.id, visaSubType?.title]);
+
   const processingCollection = [
     {
       key: t("order_summary_frocessing_fee", templateVariables),
@@ -57,7 +72,7 @@ const OrderSummary: DivElement<{
           {t("order_summary_title", templateVariables)}
         </Heading.Secondary>
         <Heading.Secondary size="sm" weight="light">
-          {visaSubType?.title}
+          {retrieveExistingType}
         </Heading.Secondary>
       </div>
       <Divider className={styles.Divider} />
@@ -120,7 +135,14 @@ const OrderSummary: DivElement<{
         <Heading.Secondary size="sm">
           {t("order_summary_generalinformation", templateVariables)}
         </Heading.Secondary>
-        <Paragraph>{visaSubType?.additional_notes}</Paragraph>
+        <div
+          dangerouslySetInnerHTML={{
+            __html:
+              visaSubType?.additional_notes === nonExistingGeneralNote
+                ? details.combination_additional_notes?.additional_notes
+                : visaSubType?.additional_notes!,
+          }}
+        />
       </div>
       <Divider className={styles.Divider} />
       <div className={styles.Documents}>
