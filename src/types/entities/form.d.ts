@@ -41,9 +41,8 @@ declare namespace FormsType {
     };
   };
 
-  type StepThreeResponse = {
+  type StepThreeResponse = DetailsResponse & {
     is_filled: boolean;
-    data: Field[];
   };
 
   type StepThreeRequest = {

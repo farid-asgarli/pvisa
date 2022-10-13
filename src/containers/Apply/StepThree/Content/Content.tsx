@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import agent from "../../../../api/agent";
 import Fade from "../../../../components/Animations/Fade/Fade";
 import Paragraph from "../../../../components/Paragraph/Paragraph";
+import Spinner from "../../../../components/Spinner/Spinner";
 import Wrapper from "../../../../components/Wrapper/Wrapper";
 import { StringExtensions } from "../../../../extensions/String";
 import { Button } from "../../../../models/components/Button";
@@ -80,15 +81,21 @@ const Content: typeof Apply.StepThree.Content = ({
           <div />
         </div>
         <div className={styles.Main}>
-          <Apply.StepThree.ApplicationForm
-            className={styles.ApplicationForm}
-            orderData={orderData.orders.find(
-              (x) => x.submitted_form_id === currentApplicant.currentFormId
-            )}
-            applicantOrderNumber={currentApplicant.applicantOrderNumber}
-            formData={formsData}
-            templateVariables={templateVariables}
-          />
+          {formsData ? (
+            <Apply.StepThree.ApplicationForm
+              className={styles.ApplicationForm}
+              orderData={orderData.orders.find(
+                (x) => x.submitted_form_id === currentApplicant.currentFormId
+              )}
+              applicantOrderNumber={currentApplicant.applicantOrderNumber}
+              formData={formsData}
+              templateVariables={templateVariables}
+            />
+          ) : (
+            <div className={styles.LoadingWrapper}>
+              <Spinner /> <span>Loading content...</span>
+            </div>
+          )}
           <Apply.StepThree.ApplicantStatus
             applicants={orderData.orders.map((x, i) => ({
               content:

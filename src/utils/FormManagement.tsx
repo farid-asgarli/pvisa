@@ -269,7 +269,7 @@ export function useFormManagement(
     if (file !== null) return file;
     else if (fieldValue === undefined) return null;
     else if (_isPhoneInput(fieldValue))
-      return `${fieldValue.code}${fieldValue.phone}`;
+      return fieldValue.phone ? `${fieldValue.code}${fieldValue.phone}` : null;
     else if (moment.isMoment(fieldValue)) return fieldValue.toDate();
     else if (typeof fieldValue === "boolean") {
       return choiceFields?.[fieldName]?.find(

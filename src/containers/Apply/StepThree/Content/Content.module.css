@@ -27,6 +27,17 @@
   background-color: #fff;
 }
 
+.Body .Main .LoadingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+.Body .Main .LoadingWrapper span {
+  font-weight: 600;
+}
+
 @media screen and (max-width: 992px) {
   .Body .Head {
     grid-template-columns: 1fr;

@@ -13,11 +13,14 @@ export const Layout: React.FC<{
   const [loading, setLoading] = useState<boolean>(false);
   Router.events.on("routeChangeStart", () => setLoading(true));
   Router.events.on("routeChangeComplete", () => setLoading(false));
-
   const bottomCTA = getCallToActionByKey(
     "call_to_action_bottom",
     commonPageProps.callToActions
   );
+
+  const canRenderBottomBanner =
+    !commonPageProps.routerProps.pathname.startsWith("/apply/step-two") &&
+    !commonPageProps.routerProps.pathname.startsWith("/apply/step-three");
 
   return (
     <>
@@ -25,15 +28,17 @@ export const Layout: React.FC<{
       <Navbar.Mobile.Item commonPageProps={commonPageProps} />
       <Progress isAnimating={loading} />
       {children}
-      <Banner.Bottom
-        buttonProps={{
-          children: t("buttons_apply", commonPageProps.templateVariables),
-        }}
-        imageUrl={bottomCTA?.background}
-        href={bottomCTA?.url}
-      >
-        {bottomCTA?.name}
-      </Banner.Bottom>
+      {canRenderBottomBanner && (
+        <Banner.Bottom
+          buttonProps={{
+            children: t("buttons_apply", commonPageProps.templateVariables),
+          }}
+          imageUrl={bottomCTA?.background}
+          href={bottomCTA?.url}
+        >
+          {bottomCTA?.name}
+        </Banner.Bottom>
+      )}
       <Footer.Item commonPageProps={commonPageProps} />
     </>
   );
