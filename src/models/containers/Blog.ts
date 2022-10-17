@@ -12,6 +12,7 @@ import PostsByCategory from "../../containers/Blog/Posts/PostsByCategory/PostsBy
 import Container from "../../containers/Blog/Categories/SearchResult/Container/Container";
 import Item from "../../containers/Blog/Categories/SearchResult/Item/Item";
 import React, { AnchorHTMLAttributes } from "react";
+import TableOfContents from "../../containers/Blog/Posts/TableOfContents/TableOfContents";
 
 type ListPostItem = {
   title?: Indefinable<string>;
@@ -123,6 +124,9 @@ type BlogComponent = {
       categoryUrl?: string;
       templateVariables: CommonContent.TemplateVariable[];
     }>;
+    TableOfContents: DivElement<{
+      titles: string[];
+    }>;
   };
   BreadCrumbs: DivElement<
     BreadCrumbProps & {
@@ -148,6 +152,7 @@ export const Blog: BlogComponent = {
     RelatedPosts,
     SinglePost,
     PostsByCategory,
+    TableOfContents,
   },
   BreadCrumbs,
 };

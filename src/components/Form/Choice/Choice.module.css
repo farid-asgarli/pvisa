@@ -5,6 +5,7 @@
   border: 1px solid #2f77fc;
   border-radius: var(--border-radius-primary);
   padding: 10px 15px;
+  min-height: 60px;
 }
 .Body .Switch {
   margin-left: auto;

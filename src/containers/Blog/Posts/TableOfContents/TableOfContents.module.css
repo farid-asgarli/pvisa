@@ -1,0 +1,26 @@
+.Body {
+  background: #f7f7fb;
+  border-radius: var(--border-radius-primary);
+  padding: 16px;
+  overflow: hidden;
+}
+
+.Body .Title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--color-text-primary);
+}
+
+.Body .Content {
+  list-style: inside;
+  margin-top: 20px;
+}
+
+.Body .Content .ListItem {
+  color: #676871;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  margin-bottom: 6px;
+}

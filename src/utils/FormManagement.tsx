@@ -1,8 +1,8 @@
 import { FormItemProps, Rule } from "antd/lib/form";
-import { Envelope, Phone, User } from "phosphor-react";
+import { Envelope, Phone, User, HashStraight } from "phosphor-react";
 import { Form } from "../models/components/Form";
 import { Form as AntForm } from "antd";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FormInstance, useForm } from "antd/lib/form/Form";
 import { CountryPhoneInputValue } from "antd-country-phone-input";
 import { toBase64 } from "./ToBase64";
@@ -186,6 +186,8 @@ export function useFormManagement(
         );
       case "tel":
         return <Form.Phone {...commonProps} icon={Phone} />;
+      case "number":
+        return <Form.Number {...commonProps} min={0} icon={HashStraight} />;
       case "text":
         return <Form.Input type={"text"} icon={User} {...commonProps} />;
       case "text-area":
@@ -244,7 +246,7 @@ export function useFormManagement(
   function mapFields(
     fields: FormsType.Field[],
     namePrefix: string,
-    props?: FormItemProps<any>
+    mapCss?: (field: FormsType.Field) => React.CSSProperties
   ): JSX.Element[] {
     return fields.map((field) => (
       <AntForm.Item
@@ -252,7 +254,10 @@ export function useFormManagement(
         name={namePrefix ? [namePrefix, field.key] : field.key}
         initialValue={mapInitialValue(field, namePrefix)}
         rules={mapRequirements(field, namePrefix)}
-        {...props}
+        style={mapCss?.(field)}
+        valuePropName={
+          field?.options?.some((x) => x.value === "Yes") ? "checked" : undefined
+        }
       >
         {mapFieldPerType(field, namePrefix)}
       </AntForm.Item>

@@ -33,7 +33,6 @@ export const getServerSideProps: GetServerSideProps<
 
   try {
     const orderResponse = await agent.Aboena.OrderGroupById(query.id);
-    console.log(JSON.stringify(orderResponse.data));
     return {
       props: {
         orderData: orderResponse.data,

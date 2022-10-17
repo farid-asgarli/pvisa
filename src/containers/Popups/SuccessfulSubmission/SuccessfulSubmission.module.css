@@ -1,0 +1,21 @@
+.Body .Content {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #0ea662;
+}
+
+.Body .IconWrapper .Icon {
+  color: #0ea662;
+  font-size: 80px;
+}
+
+.Body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding: 40px 0;
+}

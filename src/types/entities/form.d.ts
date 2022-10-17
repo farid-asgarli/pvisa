@@ -15,6 +15,7 @@ declare namespace FormsType {
       | "email"
       | "file"
       | "choice"
+      | "number"
       | "text-area"
       | "country";
     filled_value: Nullable<string>;

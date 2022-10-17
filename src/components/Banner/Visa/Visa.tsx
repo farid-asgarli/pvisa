@@ -34,19 +34,25 @@ const Visa: typeof Banner.Visa = ({
 
   const optionItems = useMemo(
     () =>
-      countries?.map((c) => (
-        <Select.Option key={c.alpha_3_code} value={c.alpha_3_code}>
-          <span key={c.alpha_3_code}>{c.display_name}</span>
-          {c.flag_icon && UrlCollection.ACEIMAGEURL && (
-            <img
-              alt={c.display_name}
-              className={styles.FlagImage}
-              src={UrlCollection.ACEIMAGEURL + c.flag_icon}
-            />
-          )}
-        </Select.Option>
-      )),
-    [countries]
+      countries?.map((c) => {
+        const keyword = c.details
+          .find((c) => c.locale === router.locale)
+          ?.keywords.concat();
+
+        return (
+          <Select.Option key={c.alpha_3_code} value={c.alpha_3_code}>
+            <span key={keyword}>{c.display_name}</span>
+            {c.flag_icon && UrlCollection.ACEIMAGEURL && (
+              <img
+                alt={c.display_name}
+                className={styles.FlagImage}
+                src={UrlCollection.ACEIMAGEURL + c.flag_icon}
+              />
+            )}
+          </Select.Option>
+        );
+      }),
+    [countries, router.locale]
   );
 
   return (

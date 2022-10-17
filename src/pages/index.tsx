@@ -41,7 +41,6 @@ export const getStaticProps: GetStaticProps<Pages.Home.PageProps> = async (
   const applicationSteps = await agent.CommonContent.ApplicationSteps(
     locale?.id!
   );
-
   const currentCountry = agent.GeoLocation.LocateCurrentCountry();
   return {
     props: {

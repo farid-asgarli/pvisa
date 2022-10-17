@@ -44,6 +44,6 @@
   }
 
   .Body .Main {
-    grid-template-columns: 1fr;
+    display: unset;
   }
 }

@@ -3,7 +3,7 @@
 import { Select } from "antd";
 import { useRouter } from "next/router";
 import { CaretDown } from "phosphor-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import agent from "../../../api/agent";
 import { StringExtensions } from "../../../extensions/String";
 import { UrlCollection } from "../../../globals";
@@ -26,25 +26,46 @@ const Primary: typeof SearchBar.Primary = ({
 
   const { country } = getAppConfig();
 
-  const [selectedCountry, setSelectedCountry] = useState<string>(
-    countries.find((x) => x.alpha_2_code === currentCountry)?.alpha_3_code ??
-      country.alpha_3_code
-  );
-
   const countriesSelect = useMemo(
     () =>
-      countries?.map((x) => ({
-        ...x,
-        flag_icon:
-          UrlCollection.ACEIMAGEURL && x.flag_icon
-            ? UrlCollection.ACEIMAGEURL + x.flag_icon
-            : StringExtensions.Empty,
-        display_name:
-          x.details.find((c) => c.locale === locale)?.display_name ??
-          x.display_name,
-      })),
+      countries?.map((x) => {
+        const keyword = x.details
+          .find((x) => x.locale === locale)
+          ?.keywords.concat();
+        return {
+          ...x,
+          flag_icon:
+            UrlCollection.ACEIMAGEURL && x.flag_icon
+              ? UrlCollection.ACEIMAGEURL + x.flag_icon
+              : StringExtensions.Empty,
+          display_name:
+            x.details.find((c) => c.locale === locale)?.display_name ??
+            x.display_name,
+          keyword,
+        };
+      }),
     [countries, locale]
   );
+
+  function handleSelectDefaultCountry() {
+    setSelectedCountry(
+      countriesSelect.find((x) =>
+        x.keyword?.includes(
+          agent.GeoLocation.LocateCurrentCountry()?.split("/")?.[1]
+        )
+      )?.alpha_3_code ?? country.alpha_3_code
+    );
+  }
+
+  useEffect(
+    () => {
+      handleSelectDefaultCountry();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
+
+  const [selectedCountry, setSelectedCountry] = useState<string>();
 
   return (
     <div className={concatStyles(styles.Body, className)} {...props}>
@@ -74,7 +95,7 @@ const Primary: typeof SearchBar.Primary = ({
               className={styles.SelectOption}
               value={c.alpha_3_code}
             >
-              <span className={styles.OptionLabel} key={c.display_name}>
+              <span className={styles.OptionLabel} key={c.keyword}>
                 {c.display_name}
               </span>
               <img
@@ -91,7 +112,7 @@ const Primary: typeof SearchBar.Primary = ({
             push(
               `/apply/step-one/params?to=${
                 country.alpha_3_code
-              }&from=${selectedCountry.toUpperCase()}&residence=${selectedCountry.toUpperCase()}`
+              }&from=${selectedCountry?.toUpperCase()}&residence=${selectedCountry?.toUpperCase()}`
             )
           }
         >

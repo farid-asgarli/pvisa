@@ -229,6 +229,17 @@
   color: #fff;
 }
 
+.Body .InputCollection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* .Body .InputCollection > div {
+  width: 100%;
+} */
+
 @media screen and (max-width: 1200px) {
   .Body .FormContent .Inputs .AttachmentOne {
     grid-template-columns: 1fr;

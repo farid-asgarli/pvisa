@@ -10,6 +10,7 @@ import { useFormManagement } from "../../../../utils/FormManagement";
 import { t } from "../../../../utils/Localization";
 import styles from "./ApplicationForm.module.css";
 import agent from "../../../../api/agent";
+import SuccessfulSubmission from "../../../Popups/SuccessfulSubmission/SuccessfulSubmission";
 
 const ApplicationForm: typeof Apply.StepThree.ApplicationForm = ({
   className,
@@ -24,7 +25,8 @@ const ApplicationForm: typeof Apply.StepThree.ApplicationForm = ({
     formData?.is_filled ?? false
   );
   const [dataSubmitted, setDataSubmitted] = useState<boolean>(false);
-
+  const [successPopupVisible, setSuccessPopupVisible] =
+    useState<boolean>(false);
   const { formInstance, mapFields, mapSubmittedForm, addFile } =
     useFormManagement(
       {
@@ -69,7 +71,9 @@ const ApplicationForm: typeof Apply.StepThree.ApplicationForm = ({
                 groupName === "Attachment" && styles.FullRow
               )}
             >
-              {mapFields(fields, namePrefix)}
+              {mapFields(fields, namePrefix, (f) => ({
+                width: f.width === 6 ? "48%" : "100%",
+              }))}
             </div>
           </div>
         );
@@ -93,6 +97,7 @@ const ApplicationForm: typeof Apply.StepThree.ApplicationForm = ({
       await agent.Forms.SubmitFieldsStepThree(dataToSubmit);
       setFormDisabled(true);
       setDataSubmitted(true);
+      setSuccessPopupVisible(true);
     } catch (error) {}
   };
 
@@ -115,6 +120,13 @@ const ApplicationForm: typeof Apply.StepThree.ApplicationForm = ({
 
   return (
     <div className={concatStyles(styles.Body, className)} {...props}>
+      {successPopupVisible && (
+        <SuccessfulSubmission
+          buttonProps={{
+            onClick: () => setSuccessPopupVisible(false),
+          }}
+        />
+      )}
       <div className={styles.ApplicantHeadingWrapper}>
         <Heading.Secondary className={styles.ApplicantHeading}>
           {t("step_three_applicant", templateVariables)} #{applicantOrderNumber}{" "}

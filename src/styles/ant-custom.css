@@ -261,4 +261,7 @@ label.ant-checkbox-wrapper + label.ant-checkbox-wrapper {
   .nationality-select-bar:not(.step-two).ant-select .ant-select-selector {
     min-width: 100px;
   }
+  .ant-row.ant-form-item {
+    width: 100% !important;
+  }
 }

@@ -66,8 +66,9 @@ export const getServerSideProps: GetServerSideProps<
 
     if (attrResponse.data.evisa_id && attrResponse.data.evisa_id !== null) {
       formsData = await agent.Forms.GetEvisaFieldsStepTwo(query.type);
+    } else {
+      formsData = await agent.Forms.GetRegularFieldsStepTwo();
     }
-    formsData = await agent.Forms.GetRegularFieldsStepTwo();
 
     const visaTypeDetails = await agent.Combinations.Filter({
       citizen_of: query.from.toUpperCase(),

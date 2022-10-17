@@ -1,4 +1,10 @@
-import { DatePickerProps, InputProps, SelectProps, SwitchProps } from "antd";
+import {
+  DatePickerProps,
+  InputNumberProps,
+  InputProps,
+  SelectProps,
+  SwitchProps,
+} from "antd";
 import { TextAreaProps } from "antd/lib/input";
 import { CountryPhoneInputProps } from "antd-country-phone-input";
 import React from "react";
@@ -10,7 +16,7 @@ import Phone from "../../components/Form/Phone/Phone";
 import Choice from "../../components/Form/Choice/Choice";
 import { DefaultOptionType } from "antd/lib/select";
 import Select from "../../components/Form/Select/Select";
-
+import Number from "../../components/Form/Number/Number";
 type FormComponent = {
   Choice: React.FC<
     SwitchProps & {
@@ -35,6 +41,11 @@ type FormComponent = {
       type?: DefaultInputTypes;
     }
   >;
+  Number: React.FC<
+    InputNumberProps & {
+      icon?: Indefinable<IconType>;
+    }
+  >;
   Phone: React.FC<
     CountryPhoneInputProps & {
       icon?: Indefinable<IconType>;
@@ -49,6 +60,7 @@ export const Form: FormComponent = {
   Date,
   File,
   Input,
+  Number,
   Select,
   Phone,
   TextArea,

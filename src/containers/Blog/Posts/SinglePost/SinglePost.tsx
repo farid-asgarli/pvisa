@@ -1,6 +1,7 @@
 import { Divider } from "antd";
 import Title from "antd/lib/typography/Title";
 import Link from "next/link";
+import { useEffect } from "react";
 import Wrapper from "../../../../components/Wrapper/Wrapper";
 import { SampleData } from "../../../../data/data";
 import { StringExtensions } from "../../../../extensions/String";
@@ -29,6 +30,19 @@ const Post: typeof Blog.Posts.SinglePost = ({
   ...props
 }) => {
   const sideCTA = getCallToActionByKey("call_to_action_side", callToActions);
+
+  function parseContentHeadings() {
+    const contentTitles: string[] = [];
+    let parser = new DOMParser();
+    const document = parser.parseFromString(content, "text/html");
+    const elements = document.getElementsByTagName("h2");
+
+    for (const key in elements) {
+      let title = elements[key].innerText;
+      title !== undefined && contentTitles.push(title);
+    }
+    return contentTitles;
+  }
 
   return (
     <div className={concatStyles(styles.Body, className)} {...props}>
@@ -79,6 +93,10 @@ const Post: typeof Blog.Posts.SinglePost = ({
             />
           </div>
           <div className={styles.Right}>
+            <Blog.Posts.TableOfContents
+              className={styles.TableOfContents}
+              titles={parseContentHeadings()}
+            />
             <Blog.Posts.RecentPostsTable
               className={styles.RecentPostsTable}
               items={recentPosts}
