@@ -35,7 +35,7 @@ type ApplyComponent = {
     ApplicationForm: DivElement<{
       orderData: Indefinable<OrdersType.SingleOrder>;
       applicantOrderNumber: number;
-      formData: Indefinable<FormsType.StepThreeResponse>;
+      formData: FormsType.StepThreeResponse;
       templateVariables: CommonContent.TemplateVariable[];
     }>;
   };

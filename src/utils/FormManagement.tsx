@@ -2,7 +2,7 @@ import { FormItemProps, Rule } from "antd/lib/form";
 import { Envelope, Phone, User, HashStraight } from "phosphor-react";
 import { Form } from "../models/components/Form";
 import { Form as AntForm } from "antd";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { FormInstance, useForm } from "antd/lib/form/Form";
 import { CountryPhoneInputValue } from "antd-country-phone-input";
 import { toBase64 } from "./ToBase64";
@@ -63,10 +63,16 @@ export function useFormManagement(
 
   function addChoiceField(field: FormsType.Field) {
     choiceFields[field.key] === undefined &&
-      setChoiceFields((p) => ({
-        ...p,
-        [field.key]: field?.options ?? [],
-      }));
+      setChoiceFields((p) => {
+        // Sort the options by letting the "No" option to placed before the "Yes" option.
+        const sortedOptions = field.options?.sort((a, b) =>
+          b?.value.localeCompare(a?.value)
+        );
+        return {
+          ...p,
+          [field.key]: sortedOptions ?? [],
+        };
+      });
   }
 
   function isFieldBoolean({ options, field_type }: FormsType.Field) {
@@ -226,8 +232,14 @@ export function useFormManagement(
       case "tel":
         return { short: "US", phone: field.filled_value ?? undefined };
       case "choice":
-        if (isFieldBoolean(field)) return false;
-        return undefined;
+        if (isFieldBoolean(field)) {
+          if (field.filled_value === null) return false;
+          return (
+            field.options?.find((x) => x.key === field.filled_value)?.value ===
+            "Yes"
+          );
+        }
+        return field.filled_value;
       case "date":
         if (field.filled_value) return moment(new Date(field.filled_value));
         return undefined;

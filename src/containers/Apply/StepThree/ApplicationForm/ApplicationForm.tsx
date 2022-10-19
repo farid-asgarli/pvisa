@@ -44,6 +44,7 @@ const ApplicationForm: typeof Apply.StepThree.ApplicationForm = ({
             addFile(field.filled_value as any, field.key, "BASE");
         });
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [orderData]);
 
@@ -108,7 +109,7 @@ const ApplicationForm: typeof Apply.StepThree.ApplicationForm = ({
       fields: finalFormValues[0],
       form_type: orderData?.order_type!,
       is_filled: false,
-      submit: true,
+      submit: false,
       submitted_form_id: orderData?.submitted_form_id!,
     };
     try {

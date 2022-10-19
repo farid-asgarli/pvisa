@@ -36,6 +36,7 @@ const Content: typeof Apply.StepThree.Content = ({
   const [formsData, setFormsData] = useState<FormsType.StepThreeResponse>();
 
   useEffect(() => {
+    setFormsData(undefined);
     fetchFormData(currentApplicant);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentApplicant]);
